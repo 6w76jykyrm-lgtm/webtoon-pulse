@@ -400,11 +400,23 @@ function Competitors(){
   const [type,setType]=useState("all");
   const [mode,setMode]=useState("real");
   const [q,setQ]=useState("");
-  const list=useMemo(()=>ARTICLES.filter(a=>(mode==="all"||(mode==="real"?a.real:!a.real))&&(comp==="all"||a.competitor===comp)&&(type==="all"||a.type===type)&&(!q||(a.title+a.titleKo+a.summary).toLowerCase().includes(q.toLowerCase()))).sort((x,y)=>y.publishedAt.localeCompare(x.publishedAt)),[comp,type,mode,q]);
-  const cnt=(id,r)=>ARTICLES.filter(a=>a.competitor===id&&a.real===r).length;
+  const [rss,setRss]=useState([]);
+  const [rssStatus,setRssStatus]=useState("불러오는 중");
+  useEffect(()=>{
+    let active=true;
+    fetch("./data/news.json?ts="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(d=>{
+      if(!active)return;
+      const items=(Array.isArray(d.articles)?d.articles:[]).filter(a=>a.url&&a.title&&a.publishedAt).map(a=>({...a,real:true,rss:true,titleKo:a.titleKo||a.title,summary:a.summary||"RSS 제목·링크만 수집됨. 기사 본문 미검증.",collectedAt:d.updatedAt||"미확인",dup:1}));
+      setRss(items);setRssStatus("마지막 수집: "+(d.updatedAt||"미확인")+" · RSS "+items.length+"건");
+    }).catch(()=>{if(active)setRssStatus("자동 수집 데이터 없음 — GitHub Actions 실행 후 표시됩니다.")});
+    return()=>{active=false};
+  },[]);
+  const allArticles=useMemo(()=>[...rss,...ARTICLES],[rss]);
+  const list=useMemo(()=>allArticles.filter(a=>(mode==="all"||(mode==="real"?a.real:!a.real))&&(comp==="all"||a.competitor===comp)&&(type==="all"||a.type===type)&&(!q||(a.title+a.titleKo+a.summary).toLowerCase().includes(q.toLowerCase()))).sort((x,y)=>y.publishedAt.localeCompare(x.publishedAt)),[comp,type,mode,q,allArticles]);
+  const cnt=(id,r)=>allArticles.filter(a=>a.competitor===id&&a.real===r).length;
   return(<div>
     <Head mixed title="Competitor Watch" desc="경쟁 플랫폼별 활동 타임라인 (REAL 뉴스 + DEMO 예시)"/>
-    <Notice><b>REAL DATA</b>는 웹 검색으로 찾은 뒤 원문을 열어 제목·발행일·내용을 확인한 기사입니다. <b>DEMO</b> 기사는 가상 예시이며 기본 화면에서는 숨겨져 있습니다. 한국어 제목과 요약은 Claude가 작성했습니다.</Notice>
+    <Notice><b>검증 뉴스</b>는 2026-10-30 당시 수동 확인한 기사입니다. <b>RSS 수집</b>은 Google News 검색 피드의 제목·링크·발행일만 자동 수집한 자료로, 원문 사실관계는 검증되지 않았습니다. <b>DEMO</b>는 가상 예시입니다.<div className="meta" style={{marginTop:6}}>{rssStatus}</div></Notice>
     <div className="grid" style={{gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))"}}>{COMPETITORS.map(c=>(
       <button key={c.id} onClick={()=>setComp(comp===c.id?"all":c.id)} aria-pressed={comp===c.id} className="card" style={{textAlign:"left",borderColor:comp===c.id?"var(--accent)":"var(--line)",boxShadow:comp===c.id?"0 0 0 1px var(--accent)":"none"}}>
         <div style={{display:"flex",alignItems:"center",gap:8,fontWeight:700}}><i style={{width:10,height:10,borderRadius:"50%",background:c.color}}/>{c.name}</div>
@@ -422,14 +434,14 @@ function Competitors(){
       {list.length===0?<div className="empty">조건에 맞는 활동이 없습니다. 필터를 초기화해 보세요.</div>:
       <ul className="tl">{list.map(a=>{const c=COMPETITORS.find(c=>c.id===a.competitor);return(
         <li key={a.id} style={{"--dot":c.color}}>
-          <div className="meta" style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}><b className="num" style={{color:"var(--ink)"}}>{a.publishedAt}</b>{a.real?<Real/>:<Demo/>}<span className="tag">{c.name}</span><span className="tag gray">{a.type}</span>{a.dup>1&&<span className="tag infer">동일 이슈 {a.dup}개 매체</span>}</div>
+          <div className="meta" style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}><b className="num" style={{color:"var(--ink)"}}>{a.publishedAt}</b>{a.rss?<span className="tag infer">RSS · 미검증</span>:a.real?<Real/>:<Demo/>}<span className="tag">{c.name}</span><span className="tag gray">{a.type}</span>{a.dup>1&&<span className="tag infer">동일 이슈 {a.dup}개 매체</span>}</div>
           <a href={a.url} target="_blank" rel="noreferrer" style={{color:"var(--accent)",fontWeight:500,textDecoration:"none",display:"block",marginTop:3}}>{a.title}</a>
-          <div>{a.titleKo}</div><div className="meta">{a.real?"요약(Claude 작성): ":""}{a.summary}</div>
-          <div className="src">출처 {a.source} · 원문 발행 {a.publishedAt} · 수집 {a.collectedAt}{a.real?" · 활동 유형은 Claude가 분류":""}</div></li>)})}</ul>}
+          <div>{a.titleKo}</div><div className="meta">{a.rss?"RSS 안내: ":a.real?"요약(Claude 작성): ":""}{a.summary}</div>
+          <div className="src">출처 {a.source} · 원문 발행 {a.publishedAt} · 수집 {a.collectedAt}{a.rss?" · RSS 키워드 분류 · 원문 미검증":a.real?" · 활동 유형은 Claude가 분류":""}</div></li>)})}</ul>}
     </Card>
     <div className="grid g2" style={{marginTop:14}}>
-      <Card title="뉴스 수집 결과 (2026-10-30)" right={<Real/>}>
-        <ul className="list">
+      <Card title="뉴스 수집 안내" right={<span className="tag infer">자동 RSS</span>}>
+        <div className="meta">{rssStatus}</div><ul className="list">
           <li><b>Google News RSS (작업 환경에서 호출)</b><div className="meta"><span className="fail">실패</span> · 접속이 거부되어 0건 수집</div></li>
           <li><b>Google News RSS (이 페이지에서 직접 호출)</b><div className="meta"><span className="fail">불가</span> · Artifact 페이지는 외부 서버로 요청을 보낼 수 없습니다</div></li>
           <li><b>웹 검색 후 원문 열람 (대체 방식)</b><div className="meta"><span className="ok">성공 5건</span> + 후속 검증 중 1건(r6) 추가 · 원문 열람 실패 1건은 제외 · 일회성 수동 수집이며 자동 갱신 아님</div></li>
