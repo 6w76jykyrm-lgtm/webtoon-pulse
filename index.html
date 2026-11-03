@@ -435,9 +435,9 @@ function Competitors(){
       <ul className="tl">{list.map(a=>{const c=COMPETITORS.find(c=>c.id===a.competitor);return(
         <li key={a.id} style={{"--dot":c.color}}>
           <div className="meta" style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}><b className="num" style={{color:"var(--ink)"}}>{a.publishedAt}</b>{a.rss?<span className="tag infer">RSS · 미검증</span>:a.real?<Real/>:<Demo/>}<span className="tag">{c.name}</span><span className="tag gray">{a.type}</span>{a.dup>1&&<span className="tag infer">동일 이슈 {a.dup}개 매체</span>}</div>
-          <a href={a.url} target="_blank" rel="noreferrer" style={{color:"var(--accent)",fontWeight:500,textDecoration:"none",display:"block",marginTop:3}}>{a.title}</a>
-          <div>{a.titleKo}</div><div className="meta">{a.rss?"RSS 안내: ":a.real?"요약(Claude 작성): ":""}{a.summary}</div>
-          <div className="src">출처 {a.source} · 원문 발행 {a.publishedAt} · 수집 {a.collectedAt}{a.rss?" · RSS 키워드 분류 · 원문 미검증":a.real?" · 활동 유형은 Claude가 분류":""}</div></li>)})}</ul>}
+          <a href={a.url} target="_blank" rel="noreferrer" style={{color:"var(--accent)",fontWeight:600,textDecoration:"none",display:"block",marginTop:3}}>{a.rss?a.titleKo:a.title}</a>
+          <div className="meta">{a.rss?a.title:a.titleKo}</div><div className="meta">{a.rss?"RSS 안내: ":a.real?"요약(Claude 작성): ":""}{a.summary}</div>
+          <div className="src">출처 {a.source} · 원문 발행 {a.publishedAt} · 수집 {a.collectedAt}{a.rss?" · RSS 제목 기반 분류 · 원문 미검증 · 자동 번역은 오류 가능":a.real?" · 활동 유형은 Claude가 분류":""}</div></li>)})}</ul>}
     </Card>
     <div className="grid g2" style={{marginTop:14}}>
       <Card title="뉴스 수집 안내" right={<span className="tag infer">자동 RSS</span>}>
