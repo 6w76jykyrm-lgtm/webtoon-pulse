@@ -209,6 +209,36 @@ const SEED_CARDS=[
 const STATUSES=["아이디어","검토","검증 필요"];
 const FIELDS=[["marketSignal","Market Signal",1],["segment","Customer Segment"],["problem","Problem",1],["hypothesis","Hypothesis",1],["action","CRM Action",1],["abTest","A/B Test",1],["kpi","KPI"],["requiredData","Required Data"],["evidence","Evidence"]];
 
+/* ================= LIVE RSS DATA ================= */
+function useNewsFeed(){
+  const [feed,setFeed]=useState({articles:[],updatedAt:null,status:"loading"});
+  useEffect(()=>{
+    let active=true;
+    fetch("./data/news.json?ts="+Date.now(),{cache:"no-store"})
+      .then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()})
+      .then(d=>{
+        if(!active)return;
+        const articles=(Array.isArray(d.articles)?d.articles:[])
+          .filter(a=>a.url&&a.title&&a.publishedAt)
+          .map(a=>({...a,real:true,rss:true,titleKo:a.titleKo||a.title,
+            summary:a.summary||"RSS 제목·링크만 수집됨. 기사 본문 미검증.",
+            collectedAt:d.updatedAt||"미확인",dup:1}));
+        setFeed({articles,updatedAt:d.updatedAt||null,status:"loaded"});
+      })
+      .catch(()=>{if(active)setFeed({articles:[],updatedAt:null,status:"error"})});
+    return()=>{active=false};
+  },[]);
+  return feed;
+}
+function rssDate(value){
+  if(!value)return "미확인";
+  const d=new Date(value);
+  return Number.isNaN(d.getTime())?"미확인":new Intl.DateTimeFormat("ko-KR",{
+    timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit",
+    hour:"2-digit",minute:"2-digit",hour12:false
+  }).format(d)+" KST";
+}
+
 /* ================= UI 조각 ================= */
 const Demo=()=> <span className="demo">DEMO</span>;
 const Real=()=> <span className="real">REAL DATA</span>;
@@ -292,11 +322,12 @@ function HBars({rows,color="var(--accent)",unit="%"}){
 }
 
 /* ================= 탭: Overview ================= */
-function Overview({go}){
+function Overview({go,feed}){
+  const latest=feed.articles.slice().sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
   const trend=useMemo(()=>buildTrend("US",30),[]);
   return(<div>
-    <Head mixed title="Executive Overview" desc={"북미 웹툰 시장 요약 · 뉴스는 REAL(2026-10-30 확인), 나머지는 DEMO"}/>
-    <Notice><b>REAL DATA</b> 표시는 실제로 찾아서 원문을 확인한 뉴스 {REAL_ARTICLES.length}건뿐입니다. 키워드 관심도, 이용자 반응, AI 인사이트 등 나머지는 모두 <b>DEMO(가상 예시)</b>입니다.</Notice>
+    <Head mixed title="Executive Overview" desc={"북미 웹툰 시장 요약 · RSS 최신 수집 "+(feed.status==="loaded"?rssDate(feed.updatedAt):feed.status==="loading"?"확인 중":"불러오기 실패")+" · 시장 지표 DEMO"}/>
+    <Notice><b>REAL DATA</b> 중 수동 원문 확인 뉴스는 {REAL_ARTICLES.length}건(2026-10-30 확인), 자동 RSS 뉴스는 {feed.articles.length}건(원문 미검증)입니다. 키워드 관심도, 이용자 반응, AI 인사이트 등 나머지는 모두 <b>DEMO(가상 예시)</b>입니다.</Notice>
     <div className="grid g4">{KPIS.map(k=>(
       <div className="card kpi" key={k.l}>
         <div className="lab"><span>{k.l}</span>{k.real?<Real/>:<Demo/>}</div>
@@ -306,10 +337,10 @@ function Overview({go}){
       </div>))}</div>
     <div className="grid g21" style={{marginTop:14}}>
       <Card title="최근 주요 뉴스" right={<Real/>}>
-        <ul className="list">{REAL_ARTICLES.slice(0,4).map(a=>{const c=COMPETITORS.find(c=>c.id===a.competitor);return(
+        <ul className="list">{(latest.length?latest:REAL_ARTICLES).slice(0,4).map(a=>{const c=COMPETITORS.find(c=>c.id===a.competitor);return(
           <li key={a.id}><div style={{display:"flex",justifyContent:"space-between",gap:8,flexWrap:"wrap"}}>
             <a href={a.url} target="_blank" rel="noreferrer">{a.titleKo}</a><span className="tag">{a.type}</span></div>
-            <div className="meta">{c.name} · {a.source} · 원문 발행 {a.publishedAt}{a.dup>1?` · 동일 이슈 ${a.dup}개 매체`:""}</div></li>)})}</ul>
+            <div className="meta">{c?.name||a.competitor} · {a.source} · 원문 발행 {a.publishedAt}{a.rss?" · RSS 원문 미검증":" · 수동 검증"}{a.dup>1?` · 동일 이슈 ${a.dup}개 매체`:""}</div></li>)})}</ul>
         <button className="btn" style={{marginTop:8}} onClick={()=>go("competitors")}>경쟁사 활동 전체 보기</button>
       </Card>
       <Card title="AI 핵심 인사이트" right={<Demo/>}>
@@ -395,22 +426,15 @@ function CopyBtn({text}){
   const go=async()=>{try{await navigator.clipboard.writeText(text);setS("복사됨")}catch(e){setS("직접 선택해 복사하세요")}setTimeout(()=>setS("복사"),2000)};
   return <button className="btn" onClick={go}>{s}</button>;
 }
-function Competitors(){
+function Competitors({feed}){
   const [comp,setComp]=useState("all");
   const [type,setType]=useState("all");
   const [mode,setMode]=useState("real");
   const [q,setQ]=useState("");
-  const [rss,setRss]=useState([]);
-  const [rssStatus,setRssStatus]=useState("불러오는 중");
-  useEffect(()=>{
-    let active=true;
-    fetch("./data/news.json?ts="+Date.now(),{cache:"no-store"}).then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()}).then(d=>{
-      if(!active)return;
-      const items=(Array.isArray(d.articles)?d.articles:[]).filter(a=>a.url&&a.title&&a.publishedAt).map(a=>({...a,real:true,rss:true,titleKo:a.titleKo||a.title,summary:a.summary||"RSS 제목·링크만 수집됨. 기사 본문 미검증.",collectedAt:d.updatedAt||"미확인",dup:1}));
-      setRss(items);setRssStatus("마지막 수집: "+(d.updatedAt||"미확인")+" · RSS "+items.length+"건");
-    }).catch(()=>{if(active)setRssStatus("자동 수집 데이터 없음 — GitHub Actions 실행 후 표시됩니다.")});
-    return()=>{active=false};
-  },[]);
+  const rss=feed.articles;
+  const rssStatus=feed.status==="loaded"
+    ? "마지막 수집: "+rssDate(feed.updatedAt)+" · RSS "+rss.length+"건"
+    : feed.status==="loading"?"불러오는 중":"자동 수집 데이터를 불러오지 못했습니다.";
   const allArticles=useMemo(()=>[...rss,...ARTICLES],[rss]);
   const list=useMemo(()=>allArticles.filter(a=>(mode==="all"||(mode==="real"?a.real:!a.real))&&(comp==="all"||a.competitor===comp)&&(type==="all"||a.type===type)&&(!q||(a.title+a.titleKo+a.summary).toLowerCase().includes(q.toLowerCase()))).sort((x,y)=>y.publishedAt.localeCompare(x.publishedAt)),[comp,type,mode,q,allArticles]);
   const cnt=(id,r)=>allArticles.filter(a=>a.competitor===id&&a.real===r).length;
@@ -510,6 +534,7 @@ function CrmLab(){
 /* ================= 앱 셸 ================= */
 const TABS=[{id:"overview",label:"Overview"},{id:"trends",label:"Market Trends"},{id:"competitors",label:"Competitor Watch"},{id:"crm",label:"CRM Strategy Lab"}];
 function App(){
+  const feed=useNewsFeed();
   const fromHash=()=>{const h=(location.hash||"").slice(1);return TABS.some(t=>t.id===h)?h:"overview"};
   const [tab,setTab]=useState(fromHash);
   useEffect(()=>{const f=()=>setTab(fromHash());window.addEventListener("hashchange",f);return()=>window.removeEventListener("hashchange",f)},[]);
@@ -519,15 +544,15 @@ function App(){
     <aside className="side">
       <div className="brand"><b>WEBTOON Pulse</b><span>North America Market Intelligence</span></div>
       <nav className="nav" aria-label="메뉴">{nav("")}</nav>
-      <div className="status"><b>데이터 상태 <span className="real">REAL</span> <span className="demo">DEMO</span></b><div>REAL 뉴스 {REAL_ARTICLES.length}건 + 나머지 DEMO</div><div>뉴스 확인 2026-10-30 (수동)</div><div>자동 갱신: 비활성</div></div>
+      <div className="status"><b>데이터 상태 <span className="real">REAL</span> <span className="demo">DEMO</span></b><div>수동 검증 {REAL_ARTICLES.length}건 · RSS 미검증 {feed.articles.length}건</div><div>RSS 최신 수집: {feed.status==="loaded"?rssDate(feed.updatedAt):feed.status==="loading"?"확인 중":"불러오기 실패"}</div><div>수동 검증 기준: 2026-10-30</div></div>
     </aside>
     <div className="main">
       <nav className="mtabs" aria-label="메뉴 (모바일)">{nav("chip")}</nav>
-      {tab==="overview"&&<Overview go={go}/>}
+      {tab==="overview"&&<Overview go={go} feed={feed}/>}
       {tab==="trends"&&<Trends/>}
-      {tab==="competitors"&&<Competitors/>}
+      {tab==="competitors"&&<Competitors feed={feed}/>}
       {tab==="crm"&&<CrmLab/>}
-      <footer>WEBTOON Pulse · Artifact 미리보기 · REAL DATA는 확인된 뉴스 기사만 해당하며, 그 외 수치는 DEMO(가상 예시)입니다. 외부 서버·DB 연결은 없습니다.</footer>
+      <footer>WEBTOON Pulse · Artifact 미리보기 · 수동 검증 뉴스와 RSS 자동 수집(원문 미검증)을 구분합니다. 시장 지표는 DEMO(가상 예시)입니다.</footer>
     </div>
   </div>);
 }
