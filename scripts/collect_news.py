@@ -1,3 +1,35 @@
+#!/usr/bin/env python3
+"""Collect Google News RSS headlines for WEBTOON Pulse (not verified article text)."""
+import datetime as dt
+import email.utils
+import hashlib
+import json
+import pathlib
+import re
+import time
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+OUT = ROOT / 'data' / 'news.json'
+
+SEARCHES = {
+    'webtoon': 'WEBTOON (comics OR app OR entertainment) when:30d',
+    'tapas': 'Tapas (webtoon OR comics OR Kakao) when:30d',
+    'manta': 'Manta (webtoon OR comics OR Ridibooks OR Ridi) when:30d',
+    'tappytoon': 'Tappytoon (webtoon OR comics) when:30d',
+}
+
+PATTERNS = {
+    'webtoon': re.compile(r'\bwebtoon\b', re.I),
+    'tapas': re.compile(r'\btapas\b', re.I),
+    'manta': re.compile(r'\bmanta\b', re.I),
+    'tappytoon': re.compile(r'\btappytoon\b', re.I),
+}
+COMICS_CONTEXT = re.compile(
+    r'\b(webtoon|webcomics?|comics?|manhwa|manga|graphic novel|episodes?|chapters?|'
+    r'creators?|kakao entertainment|ridibooks|ridi|tappytoon|digital comics?)\b', re.I)
 UNRELATED = {
     'tapas': re.compile(r'\b(restaurants?|recipes?|food|dishes|bars?|wine|spanish cuisine)\b', re.I),
     'manta': re.compile(r'\b(manta rays?|diving|snorkeling|ocean|marine|fish|resort)\b', re.I),
