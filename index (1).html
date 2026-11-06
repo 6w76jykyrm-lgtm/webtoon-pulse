@@ -1,0 +1,562 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>WEBTOON Pulse</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: 좌측 네이비 사이드바 + 흰 캔버스 (모바일은 상단 탭바). 블루 포인트, 앰버는 DEMO 전용 */
+:root{
+  --bg:#f4f7fb; --surface:#ffffff; --ink:#0f1f3d; --muted:#5b6b86; --faint:#8a97ad;
+  --line:#e1e8f2; --navy:#0b1b3a; --navy2:#142a52; --accent:#2563eb; --accent-soft:#e6efff;
+  --good:#15803d; --bad:#c62828; --warn:#b45309; --warn-soft:#fff4dc; --warn-line:#f2d9a0;
+  --sans:"Noto Sans KR",-apple-system,"Apple SD Gothic Neo","Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0a1220; --surface:#111c31; --ink:#e8eefb; --muted:#9db0d0; --faint:#6f82a5;
+  --line:#22314f; --navy:#060d1a; --navy2:#13213d; --accent:#5b8cff; --accent-soft:#17284d;
+  --good:#4ade80; --bad:#ff7b7b; --warn:#f5c26b; --warn-soft:#2c2412; --warn-line:#5a4521; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0a1220; --surface:#111c31; --ink:#e8eefb; --muted:#9db0d0; --faint:#6f82a5;
+  --line:#22314f; --navy:#060d1a; --navy2:#13213d; --accent:#5b8cff; --accent-soft:#17284d;
+  --good:#4ade80; --bad:#ff7b7b; --warn:#f5c26b; --warn-soft:#2c2412; --warn-line:#5a4521; color-scheme:dark;}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.num{font-variant-numeric:tabular-nums}
+.real{display:inline-block;font:500 10px var(--mono);letter-spacing:.06em;background:#e3f6e9;color:#146c33;border:1px solid #9fd8b2;border-radius:4px;padding:1px 5px;vertical-align:middle}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .real{background:#12301e;color:#7be0a0;border-color:#2a6b45}}
+:root[data-theme="dark"] .real{background:#12301e;color:#7be0a0;border-color:#2a6b45}
+.code{display:block;font:12px/1.5 var(--mono);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;overflow-x:auto;white-space:nowrap}
+.fail{color:var(--bad);font-weight:700}.ok{color:var(--good);font-weight:700}
+
+.shell{display:grid;grid-template-columns:232px minmax(0,1fr);gap:24px;max-width:1280px;margin:0 auto}
+.side{position:sticky;top:0;align-self:start;height:100vh;padding:20px 0;display:flex;flex-direction:column;gap:18px}
+.brand{background:var(--navy);color:#fff;border-radius:14px;padding:16px}
+.brand b{font-size:17px;letter-spacing:-.01em;display:block}
+.brand span{font-size:11px;color:#9db0d0}
+.nav{display:flex;flex-direction:column;gap:4px}
+.nav button{text-align:left;border:0;background:transparent;padding:9px 12px;border-radius:9px;color:var(--muted);font-weight:500}
+.nav button:hover{background:var(--accent-soft);color:var(--ink)}
+.nav button[aria-current="page"]{background:var(--accent);color:#fff}
+.status{margin-top:auto;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:12px;font-size:12px;color:var(--muted)}
+.status b{color:var(--ink)}
+.main{min-width:0;padding:22px 0 40px}
+h1{font-size:22px;letter-spacing:-.02em;margin:0;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.sub{color:var(--muted);margin:2px 0 14px}
+.demo{display:inline-block;font:500 10px var(--mono);letter-spacing:.06em;background:var(--warn-soft);color:var(--warn);border:1px solid var(--warn-line);border-radius:4px;padding:1px 5px;vertical-align:middle}
+.notice{border:1px solid var(--warn-line);background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:9px 12px;font-size:12px;margin-bottom:14px}
+.notice.info{border-color:var(--line);background:var(--accent-soft);color:var(--ink)}
+.grid{display:grid;gap:14px;min-width:0}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g21{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
+.card h3{margin:0 0 10px;font-size:13px;font-weight:700;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.kpi .lab{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:6px}
+.kpi .val{font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1.2;margin-top:6px}
+.kpi .val small{font-size:12px;color:var(--muted);font-weight:500;margin-left:4px}
+.src{font-size:11px;color:var(--faint);margin-top:6px}
+.tag{display:inline-block;font-size:11px;font-weight:500;padding:1px 7px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.tag.gray{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.tag.fact{background:#e3f6e9;color:#146c33}.tag.infer{background:var(--warn-soft);color:var(--warn)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tag.fact{background:#12301e;color:#7be0a0}}
+:root[data-theme="dark"] .tag.fact{background:#12301e;color:#7be0a0}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:9px 0;border-top:1px solid var(--line)}
+.list li:first-child{border-top:0}
+.list a{color:var(--accent);text-decoration:none;font-weight:500}
+.list a:hover{text-decoration:underline}
+.meta{font-size:12px;color:var(--muted)}
+.bar{display:flex;height:10px;border-radius:99px;overflow:hidden;background:var(--line)}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
+.group{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.group>label{font-size:12px;color:var(--muted);margin-right:2px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:3px 11px;font-size:12px;font-weight:500}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.input,.select,.ta{border:1px solid var(--line);background:var(--surface);border-radius:9px;padding:6px 10px;min-width:0}
+.input:focus,.select:focus,.ta:focus{border-color:var(--accent)}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:9px;padding:6px 12px;font-weight:500}
+.btn:hover{border-color:var(--accent)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.chartbox{position:relative;width:100%}
+.chartbox svg{display:block;width:100%;height:auto}
+.tip{position:absolute;pointer-events:none;background:var(--navy);color:#fff;border-radius:9px;padding:8px 10px;font-size:12px;z-index:3;min-width:130px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.tip div{display:flex;justify-content:space-between;gap:12px}
+.tl{list-style:none;margin:0;padding:0 0 0 14px;border-left:2px solid var(--line)}
+.tl li{position:relative;padding:0 0 16px 14px}
+.tl li::before{content:"";position:absolute;left:-22px;top:5px;width:10px;height:10px;border-radius:50%;background:var(--dot,var(--accent));border:2px solid var(--surface)}
+.cardgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card dl{margin:0;display:grid;grid-template-columns:104px minmax(0,1fr);gap:6px 10px;font-size:13px}
+.card dt{font-size:11px;font-weight:700;color:var(--faint);text-transform:uppercase;letter-spacing:.04em;padding-top:2px}
+.card dd{margin:0;overflow-wrap:anywhere}
+.modalbg{position:fixed;inset:0;background:rgba(6,13,26,.55);z-index:50;overflow:auto;padding:24px 16px}
+.modal{max-width:640px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.modal label{display:block;font-size:11px;font-weight:700;color:var(--faint);margin-top:10px}
+.modal .input,.modal .ta,.modal .select{width:100%;margin-top:3px}
+.empty{padding:28px 0;text-align:center;color:var(--muted)}
+footer{margin-top:28px;border-top:1px solid var(--line);padding-top:12px;font-size:11px;color:var(--faint)}
+.mtabs{display:none}
+
+@media (max-width:1000px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.g3,.g21{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:820px){
+  .shell{grid-template-columns:minmax(0,1fr);gap:0}
+  .side{display:none}
+  .mtabs{display:flex;gap:6px;overflow-x:auto;padding:10px 0;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5}
+  .mtabs button{white-space:nowrap}
+  body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+  .g2,.cardgrid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:480px){.g4{grid-template-columns:minmax(0,1fr)}.card dl{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.24.7/babel.min.js"></script>
+<script type="text/babel">
+const { useState, useMemo, useEffect, useRef } = React;
+
+/* ================= DEMO DATA (모두 가상 예시) ================= */
+const AS_OF = "2026-10-30";
+const UPDATED = "2026-10-30 09:00 KST (DEMO)";
+const COUNTRIES = [{id:"US",label:"미국"},{id:"CA",label:"캐나다"}];
+const PERIODS = [{id:"7d",label:"7일",days:7},{id:"30d",label:"30일",days:30},{id:"90d",label:"90일",days:90},{id:"12m",label:"12개월",days:365}];
+const KEYWORDS = [
+  {id:"webtoon",label:"Webtoon",color:"#2563eb",base:55},
+  {id:"manhwa",label:"Manhwa",color:"#0891b2",base:38},
+  {id:"manga",label:"Manga",color:"#64748b",base:85},
+  {id:"korean_comics",label:"Korean comics",color:"#7c3aed",base:22},
+  {id:"romance_webtoon",label:"Romance webtoon",color:"#db2777",base:18},
+  {id:"fantasy_webtoon",label:"Fantasy webtoon",color:"#059669",base:15},
+  {id:"bl_webtoon",label:"BL webtoon",color:"#d97706",base:12},
+];
+const EVENTS = [
+  {date:"2026-10-18",label:"가상 신작 공개 (DEMO)"},
+  {date:"2026-09-25",label:"가상 프로모션 시작 (DEMO)"},
+  {date:"2026-08-12",label:"가상 영상화 발표 (DEMO)"},
+];
+function rng(seed){let s=seed;return()=>{s=(s*1664525+1013904223)%4294967296;return s/4294967296}}
+function buildTrend(country,days){
+  const out=[],end=new Date(AS_OF+"T00:00:00Z"),step=days>120?7:1,sb=country==="US"?11:29;
+  for(let d=days;d>=0;d-=step){
+    const p={date:new Date(end.getTime()-d*864e5).toISOString().slice(0,10)};
+    KEYWORDS.forEach((k,i)=>{
+      const r=rng(sb*1000+i*97+d)();
+      const v=k.base+(country==="CA"?-4:0)+(days-d)/days*6+(r-.5)*10;
+      p[k.id]=Math.max(1,Math.min(100,Math.round(v)));
+    });
+    out.push(p);
+  }
+  return out;
+}
+const COMPETITORS=[
+  {id:"webtoon",name:"WEBTOON",color:"#16a34a"},{id:"tapas",name:"Tapas",color:"#f59e0b"},
+  {id:"manta",name:"Manta",color:"#e11d48"},{id:"tappytoon",name:"Tappytoon",color:"#7c3aed"},
+  {id:"other",name:"기타 플랫폼",color:"#64748b"},
+];
+const TYPES=["콘텐츠·독점작","서비스·앱 기능","구독·결제 정책","프로모션·캠페인","파트너십·IP","경영·사업"];
+const A=(id,competitor,type,title,titleKo,pub,dup,summary)=>({id,competitor,type,title,titleKo,publishedAt:pub,collectedAt:AS_OF,dup,summary,source:"DEMO Source",real:false,url:"https://example.com/demo/"+id});
+const DEMO_ARTICLES=[
+  A("a1","webtoon","구독·결제 정책","[DEMO] Platform A tests new coin bundle pricing in North America","[DEMO] 플랫폼 A, 북미에서 코인 번들 가격 테스트","2026-10-29",3,"가상 예시: 코인 번들 구성 변경 실험 샘플."),
+  A("a2","tapas","콘텐츠·독점작","[DEMO] Platform B announces exclusive fantasy series lineup","[DEMO] 플랫폼 B, 판타지 독점 라인업 발표","2026-10-28",2,"가상 예시: 독점 시리즈 발표 샘플."),
+  A("a3","manta","프로모션·캠페인","[DEMO] Platform C launches Halloween reading event","[DEMO] 플랫폼 C, 할로윈 독서 이벤트 개시","2026-10-27",1,"가상 예시: 시즌 프로모션 샘플."),
+  A("a4","tappytoon","서비스·앱 기능","[DEMO] Platform D updates app with personalized shelf","[DEMO] 플랫폼 D, 개인화 서가 기능 업데이트","2026-10-24",1,"가상 예시: 앱 기능 업데이트 샘플."),
+  A("a5","webtoon","파트너십·IP","[DEMO] Platform A and studio sign adaptation partnership","[DEMO] 플랫폼 A, 스튜디오와 영상화 파트너십","2026-10-20",4,"가상 예시: IP 확장 샘플."),
+  A("a6","tapas","경영·사업","[DEMO] Platform B reports organizational update","[DEMO] 플랫폼 B, 조직 개편 관련 소식","2026-10-12",1,"가상 예시: 경영 뉴스 샘플."),
+  A("a7","manta","구독·결제 정책","[DEMO] Platform C adjusts subscription tiers","[DEMO] 플랫폼 C, 구독 티어 조정","2026-09-30",2,"가상 예시: 구독 정책 샘플."),
+  A("a8","tappytoon","콘텐츠·독점작","[DEMO] Platform D adds new romance titles","[DEMO] 플랫폼 D, 로맨스 신작 추가","2026-09-18",1,"가상 예시: 신작 추가 샘플."),
+  A("a9","other","경영·사업","[DEMO] Platform E enters North America market","[DEMO] 플랫폼 E, 북미 시장 진출","2026-09-02",2,"가상 예시: 신규 진입자 샘플."),
+];
+/* REAL: 2026-10-30 웹 검색으로 찾고 원문을 열어 제목·발행일·내용을 확인한 기사만 포함. 한국어 제목·요약은 Claude가 작성. */
+const R=(id,competitor,type,title,titleKo,pub,source,url,summary)=>({id,competitor,type,title,titleKo,publishedAt:pub,collectedAt:"2026-10-30",dup:1,summary,source,url,real:true});
+const REAL_ARTICLES=[
+  R("r1","webtoon","경영·사업","WEBTOON Entertainment Inc. to Report Third Quarter 2026 Financial Results on November 9, 2026","WEBTOON Entertainment, 2026년 3분기 실적을 11월 9일 발표 예정","2026-10-19","GlobeNewswire 보도자료 (Finviz 전재)","https://finviz.com/news/404182/webtoon-entertainment-inc-to-report-third-quarter-2026-financial-results-on-november-9-2026","3분기 실적을 11월 9일 장 마감 후 발표하고, 오후 4시 30분(ET)에 경영진 콜을 진행한다는 공지입니다."),
+  R("r2","webtoon","파트너십·IP","Webtoon Entertainment joins New York Comic Con, unveils 'Fogland' and Marvel app","WEBTOON Entertainment, 뉴욕 코믹콘에서 ‘Fogland’와 마블 앱 공개","2026-10-12","Digital Today","https://www.digitaltoday.co.kr/en/view/113110/webtoon-entertainment-joins-new-york-comic-con-unveils-fogland-and-marvel-app","뉴욕 코믹콘 2026에서 자사 작품과 마블 코믹스 앱을 소개했고, 일본 파트너 및 Crunchyroll과 웹툰 약 15편의 애니메이션 제작을 개발 단계부터 추진한다고 밝혔습니다."),
+  R("r3","tapas","경영·사업","Kakao Pulls the Plug on Tapas Webtoon Platform","카카오, Tapas 서비스 종료 계획 보도 (9/22 당시 미확인 보도 · 후속 r6 참고)","2026-09-22","ICv2","https://icv2.com/articles/news/view/63436/kakao-pulls-plug-tapas-webtoon-platform","카카오엔터테인먼트가 Tapas 종료를 계획 중이라는 한국 언론 보도를 전한 기사입니다. 작성 시점에는 회사의 공식 안내가 없었고, 이후 종료 공지가 보도되었습니다(r6)."),
+  R("r4","tappytoon","프로모션·캠페인","Tappytoon Ushers in a New Era with \"10 Years of Stories\" Anniversary Campaign","Tappytoon, 10주년 ‘10 Years of Stories’ 캠페인 시작","2026-07-23","Business Wire (Wedbush 투자자 페이지)","https://investor.wedbush.com/wedbush/article/bizwire-2026-7-23-tappytoon-ushers-in-a-new-era-with-10-years-of-stories-anniversary-campaign","앱 내 이벤트, 대표작 프로모션, 기념 굿즈와 함께 포토부스 업체 Photoism과 제휴해 7월 24일~10월 23일 일부 국가 1,100곳 이상에서 테마 프레임을 제공합니다."),
+  R("r5","manta","콘텐츠·독점작","Manta now includes manga on its platform","Manta, 플랫폼에 만화(manga) 추가","2026-04-08","K Comics Beat","https://kcomicsbeat.com/2026/04/08/manta-now-includes-manga-on-its-platform/","웹툰·웹소설 플랫폼 Manta가 manga를 추가했고, 고단샤와 함께 400여 작품의 1권 할인 프로모션을 4월 20일까지 진행했습니다."),
+  R("r6","tapas","경영·사업","[IT돋보기] 인수 6년만⋯카카오엔터테인먼트 美 타파스, 내년 3월 말 종료","인수 6년 만에 카카오엔터 미국 Tapas, 2027년 3월 말 서비스 종료","2026-10-06","iNews24","https://inews24.com/view/2012303","Tapas가 2027년 3월 31일 서비스를 종료하며 Tapas 자체 공지로 알렸다고 전합니다. 자체 결제 수단 Ink는 신규 구매·충전이 중단되어 정리 중입니다. 이용자·창작자 이전 방안은 기사에 나오지 않습니다."),
+];
+const ARTICLES=[...REAL_ARTICLES,...DEMO_ARTICLES].sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
+const SENT=[{n:"긍정",v:41,c:"#16a34a"},{n:"중립",v:22,c:"#94a3b8"},{n:"부정",v:37,c:"#dc2626"}];
+const THEMES=[["결제·코인 가격",24],["콘텐츠 다양성",21],["광고·팝업",17],["앱 성능·버그",15],["업데이트 주기",13],["추천·검색",10]];
+const REVIEW={n:480,period:"2026-09-30 ~ 2026-10-29",note:"공개 리뷰 일부이며 전체 북미 이용자 의견으로 일반화할 수 없습니다."};
+const KPIS=[
+  {l:"실제 확인 뉴스",v:String(REAL_ARTICLES.length),u:"건",n:"원문을 열어 확인한 기사",s:"웹 검색 + 원문 열람 (Google News RSS 아님)",real:true},
+  {l:"'Webtoon' 관심도",v:"61",u:"지수 0–100",n:"상대적 검색 관심도",d:"+4",s:"DEMO · Google Trends"},
+  {l:"리뷰 표본",v:"480",u:"건",n:"부정 비율 37%",s:"DEMO · Google Play/Reddit"},
+  {l:"경쟁사 활동",v:"9",u:"건",n:"최근 30일",s:"DEMO · 뉴스 분류"},
+];
+const INSIGHTS=[
+  {t:"결제 정책 변화와 결제 관련 불만이 같은 시기에 관찰됩니다. 인과관계는 확인되지 않았습니다.",ev:"a1 · 리뷰 주제 ‘결제·코인 가격’"},
+  {t:"판타지 콘텐츠가 경쟁사 발표와 이용자 언급에서 함께 나타납니다. 추가 데이터가 필요합니다.",ev:"a2 · 장르 언급 표본"},
+];
+const SEED_CARDS=[
+  {id:"c4",real:true,title:"Tapas 종료 대응: 읽던 작품 찾기 온보딩",marketSignal:"[REAL r3·r6] Tapas가 2027-03-31 서비스 종료를 공지한 것으로 보도됨(iNews24, 2026-10-06). 영향받는 이용자 규모는 확인되지 않음.",segment:"신규 가입자 중 직전까지 다른 웹툰 플랫폼을 쓰던 이용자 (가입 설문 자기응답 기준)",problem:"플랫폼을 옮긴 직후 읽던 작품이나 비슷한 작품을 못 찾으면 첫 주에 이탈할 수 있음 (가정)",hypothesis:"‘이전에 읽던 작품·장르’를 묻고 맞춤 추천을 보여주면 가입 후 7일 내 재방문이 늘 것이다 (미검증)",action:"가입 직후 선택형 질문 1개(읽던 작품/장르) → 홈 첫 화면 추천 + 3일차 이어보기 알림 1회. 경쟁사 이용자 추적이 아닌 본인 응답만 사용",abTest:"신규 가입자 무작위 50:50. 실험군: 질문+맞춤 추천 / 대조군: 기본 인기작 홈. 최소 2주(주간 주기 2회 포함), 표본 크기는 내부 기준선으로 산정",kpi:"주 KPI: 가입 후 7일 내 2일 이상 방문 비율. 가드레일: 가입 완료율, 질문 이탈률, 알림 수신 거부율",requiredData:"가입일, 첫 7일 일별 방문·열람 로그, 설문 응답, 알림 동의 여부, 현재 7일 재방문 기준선",evidence:"REAL r3 (ICv2, 2026-09-22) · REAL r6 (iNews24, 2026-10-06). 가설과 실험 설계는 AI 작성이며 실험 결과 없음",status:"검증 필요"},
+  {id:"c1",title:"[DEMO] 장르 선택 온보딩",marketSignal:"리뷰에서 ‘신작 탐색 어려움’ 언급 (표본 한정)",segment:"가입 7일 이내 신규",problem:"초기 탐색 실패로 이탈 가능성",hypothesis:"장르 선택 기반 추천이 2주차 재방문율을 높일 것이다 (미검증)",action:"가입 직후 장르 3개 선택 → 홈 추천 + 푸시 1회",abTest:"실험군: 온보딩 적용 / 대조군: 기본 홈 / 2주 / 무작위 배정",kpi:"2주차 재방문율 (가드레일: 푸시 수신 거부율)",requiredData:"가입일, 첫 7일 열람 로그, 푸시 동의 여부",evidence:"DEMO 리뷰 샘플, 기사 a4",status:"아이디어"},
+  {id:"c2",title:"[DEMO] 무료 대기 만료 리마인드",marketSignal:"결제·코인 가격 관련 언급 비중이 높게 관찰 (DEMO)",segment:"무료 대기 중 이탈 이용자",problem:"대기 중 이탈 후 미복귀",hypothesis:"대기 완료 알림이 복귀율을 높일 것이다 (미검증)",action:"대기 완료 시점 맞춤 알림",abTest:"실험군: 알림 / 대조군: 무알림 / 3주",kpi:"알림 후 24시간 내 복귀율 (가드레일: 알림 차단율)",requiredData:"대기 시작·완료 로그, 알림 동의",evidence:"DEMO 리뷰 샘플, 기사 a1",status:"검토"},
+  {id:"c3",title:"[DEMO] 휴면 직전 관심작 업데이트 안내",marketSignal:"업데이트 알림 부재 언급 (DEMO)",segment:"미접속 14일 이용자",problem:"휴면 전환",hypothesis:"관심작 업데이트 안내가 휴면 전환을 줄일 것이다 (미검증)",action:"관심작 신규 회차 이메일/푸시",abTest:"실험군: 개인화 안내 / 대조군: 일반 공지",kpi:"30일 내 복귀율",requiredData:"최근 접속일, 구독 작품, 알림 동의",evidence:"DEMO 리뷰 샘플, 기사 a4",status:"검증 필요"},
+];
+const STATUSES=["아이디어","검토","검증 필요"];
+const FIELDS=[["marketSignal","Market Signal",1],["segment","Customer Segment"],["problem","Problem",1],["hypothesis","Hypothesis",1],["action","CRM Action",1],["abTest","A/B Test",1],["kpi","KPI"],["requiredData","Required Data"],["evidence","Evidence"]];
+
+/* ================= LIVE RSS DATA ================= */
+function useNewsFeed(){
+  const [feed,setFeed]=useState({articles:[],updatedAt:null,status:"loading"});
+  useEffect(()=>{
+    let active=true;
+    fetch("./data/news.json?ts="+Date.now(),{cache:"no-store"})
+      .then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()})
+      .then(d=>{
+        if(!active)return;
+        const articles=(Array.isArray(d.articles)?d.articles:[])
+          .filter(a=>a.url&&a.title&&a.publishedAt)
+          .map(a=>({...a,real:true,rss:true,titleKo:a.titleKo||a.title,
+            summary:a.summary||"RSS 제목·링크만 수집됨. 기사 본문 미검증.",
+            collectedAt:d.updatedAt||"미확인",dup:1}));
+        setFeed({articles,updatedAt:d.updatedAt||null,status:"loaded"});
+      })
+      .catch(()=>{if(active)setFeed({articles:[],updatedAt:null,status:"error"})});
+    return()=>{active=false};
+  },[]);
+  return feed;
+}
+function rssDate(value){
+  if(!value)return "미확인";
+  const d=new Date(value);
+  return Number.isNaN(d.getTime())?"미확인":new Intl.DateTimeFormat("ko-KR",{
+    timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit",
+    hour:"2-digit",minute:"2-digit",hour12:false
+  }).format(d)+" KST";
+}
+
+/* ================= UI 조각 ================= */
+const Demo=()=> <span className="demo">DEMO</span>;
+const Real=()=> <span className="real">REAL DATA</span>;
+const Notice=({children,info})=> <div className={"notice"+(info?" info":"")}>{children}</div>;
+const Card=({title,right,children,className=""})=>(
+  <section className={"card "+className}>
+    {title&&<h3><span>{title}</span>{right}</h3>}{children}
+  </section>
+);
+const Head=({title,desc,mixed})=>(<div><h1>{title}{mixed?<><Real/><Demo/></>:<Demo/>}</h1><p className="sub">{desc}</p></div>);
+
+function useWidth(){
+  const ref=useRef(null);const [w,setW]=useState(640);
+  useEffect(()=>{
+    if(!ref.current)return;
+    const ro=new ResizeObserver(e=>setW(Math.max(280,Math.floor(e[0].contentRect.width))));
+    ro.observe(ref.current);return()=>ro.disconnect();
+  },[]);
+  return [ref,w];
+}
+
+/* ================= 차트 (직접 그린 SVG) ================= */
+function LineChart({data,keys,events=[],height=320}){
+  const [ref,w]=useWidth();
+  const [hover,setHover]=useState(null);
+  const H=w<480?Math.min(height,260):height;
+  const m={t:16,r:14,b:26,l:34};
+  const iw=w-m.l-m.r, ih=H-m.t-m.b;
+  const x=i=>m.l+(data.length<2?0:i*iw/(data.length-1));
+  const y=v=>m.t+ih-(v/100)*ih;
+  const ticks=[0,25,50,75,100];
+  const xl=[];const n=Math.min(w<480?4:7,data.length);
+  for(let i=0;i<n;i++){xl.push(Math.round(i*(data.length-1)/Math.max(1,n-1)))}
+  const snap=d=>{let b=0,bd=1e18;data.forEach((p,i)=>{const dd=Math.abs(new Date(p.date)-new Date(d));if(dd<bd){bd=dd;b=i}});return b};
+  const inRange=d=>d>=data[0].date&&d<=data[data.length-1].date;
+  const onMove=e=>{
+    const r=e.currentTarget.getBoundingClientRect();
+    const px=(e.clientX-r.left)*(w/r.width);
+    const i=Math.round((px-m.l)/(iw/Math.max(1,data.length-1)));
+    setHover(Math.max(0,Math.min(data.length-1,i)));
+  };
+  const hp=hover!==null?data[hover]:null;
+  const tipLeft=hp?Math.min(w-150,Math.max(4,x(hover)+12)):0;
+  return (
+    <div className="chartbox" ref={ref}>
+      <svg viewBox={`0 0 ${w} ${H}`} role="img" aria-label="키워드별 검색 관심도 추이 (DEMO)" onMouseMove={onMove} onMouseLeave={()=>setHover(null)} onTouchMove={e=>onMove(e.touches[0])} onTouchEnd={()=>setHover(null)}>
+        {ticks.map(t=>(<g key={t}><line x1={m.l} x2={w-m.r} y1={y(t)} y2={y(t)} stroke="var(--line)" fill="none"/><text x={m.l-6} y={y(t)+4} textAnchor="end" fontSize="10" fill="var(--faint)">{t}</text></g>))}
+        {xl.map(i=>(<text key={i} x={x(i)} y={H-8} textAnchor={i===0?"start":i===data.length-1?"end":"middle"} fontSize="10" fill="var(--faint)">{data[i].date.slice(5)}</text>))}
+        {events.filter(e=>inRange(e.date)).map(e=>{const i=snap(e.date);return(<g key={e.date}><line x1={x(i)} x2={x(i)} y1={m.t} y2={m.t+ih} stroke="#f59e0b" strokeDasharray="4 3" fill="none"/><circle cx={x(i)} cy={m.t} r="4" fill="#f59e0b"/></g>)})}
+        {keys.map(k=>{
+          const d=data.map((p,i)=>`${i?"L":"M"}${x(i).toFixed(1)} ${y(p[k.id]).toFixed(1)}`).join(" ");
+          const last=data[data.length-1][k.id];
+          return(<g key={k.id}><path d={d} stroke={k.color} strokeWidth="2.2" fill="none" strokeLinejoin="round" strokeLinecap="round"/><circle cx={x(data.length-1)} cy={y(last)} r="3.5" fill={k.color}/></g>);
+        })}
+        {hp&&(<g><line x1={x(hover)} x2={x(hover)} y1={m.t} y2={m.t+ih} stroke="var(--muted)" fill="none"/>{keys.map(k=>(<circle key={k.id} cx={x(hover)} cy={y(hp[k.id])} r="4" fill={k.color} stroke="var(--surface)" strokeWidth="1.5"/>))}</g>)}
+      </svg>
+      {hp&&(<div className="tip num" style={{left:tipLeft,top:8}}>
+        <div style={{color:"#9db0d0"}}><span>{hp.date}</span><span>DEMO</span></div>
+        {keys.map(k=>(<div key={k.id}><span><i style={{display:"inline-block",width:8,height:8,borderRadius:"50%",background:k.color,marginRight:6}}/>{k.label}</span><b>{hp[k.id]}</b></div>))}
+      </div>)}
+    </div>
+  );
+}
+
+function Spark({data,id,color}){
+  const w=120,h=30;
+  const vals=data.map(p=>p[id]);const mn=Math.min(...vals),mx=Math.max(...vals);
+  const pts=vals.map((v,i)=>`${(i*(w-6)/(vals.length-1)+3).toFixed(1)},${(h-4-(v-mn)/(mx-mn||1)*(h-8)).toFixed(1)}`);
+  const lastP=pts[pts.length-1].split(",");
+  return(<svg viewBox={`0 0 ${w} ${h}`} width="100%" height="30" aria-hidden="true"><polyline points={pts.join(" ")} fill="none" stroke={color} strokeWidth="2" strokeLinejoin="round"/><circle cx={lastP[0]} cy={lastP[1]} r="3" fill={color}/></svg>);
+}
+
+function HBars({rows,color="var(--accent)",unit="%"}){
+  const mx=Math.max(...rows.map(r=>r[1]));
+  return(<div style={{display:"grid",gap:9}}>{rows.map(([l,v])=>(
+    <div key={l} style={{display:"grid",gridTemplateColumns:"minmax(86px,120px) minmax(0,1fr) 38px",gap:8,alignItems:"center",fontSize:12}}>
+      <span style={{color:"var(--muted)"}}>{l}</span>
+      <div style={{background:"var(--line)",borderRadius:99,height:10}}><div style={{width:(v/mx*100)+"%",background:color,height:10,borderRadius:99}}/></div>
+      <b className="num" style={{textAlign:"right"}}>{v}{unit}</b>
+    </div>))}</div>);
+}
+
+/* ================= 탭: Overview ================= */
+function Overview({go,feed}){
+  const latest=feed.articles.slice().sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
+  const trend=useMemo(()=>buildTrend("US",30),[]);
+  return(<div>
+    <Head mixed title="Executive Overview" desc={"북미 웹툰 시장 요약 · RSS 최신 수집 "+(feed.status==="loaded"?rssDate(feed.updatedAt):feed.status==="loading"?"확인 중":"불러오기 실패")+" · 시장 지표 DEMO"}/>
+    <Notice><b>REAL DATA</b> 중 수동 원문 확인 뉴스는 {REAL_ARTICLES.length}건(2026-10-30 확인), 자동 RSS 뉴스는 {feed.articles.length}건(원문 미검증)입니다. 키워드 관심도, 이용자 반응, AI 인사이트 등 나머지는 모두 <b>DEMO(가상 예시)</b>입니다.</Notice>
+    <div className="grid g4">{KPIS.map(k=>(
+      <div className="card kpi" key={k.l}>
+        <div className="lab"><span>{k.l}</span>{k.real?<Real/>:<Demo/>}</div>
+        <div className="val num">{k.v}<small>{k.u}</small>{k.d&&<span className="tag" style={{marginLeft:8,background:"#e3f6e9",color:"#146c33"}}>{k.d}</span>}</div>
+        <div className="meta">{k.n}</div>
+        <div className="src">출처: {k.s} · 기준일 {AS_OF}</div>
+      </div>))}</div>
+    <div className="grid g21" style={{marginTop:14}}>
+      <Card title="최근 주요 뉴스" right={<Real/>}>
+        <ul className="list">{(latest.length?latest:REAL_ARTICLES).slice(0,4).map(a=>{const c=COMPETITORS.find(c=>c.id===a.competitor);return(
+          <li key={a.id}><div style={{display:"flex",justifyContent:"space-between",gap:8,flexWrap:"wrap"}}>
+            <a href={a.url} target="_blank" rel="noreferrer">{a.titleKo}</a><span className="tag">{a.type}</span></div>
+            <div className="meta">{c?.name||a.competitor} · {a.source} · 원문 발행 {a.publishedAt}{a.rss?" · RSS 원문 미검증":" · 수동 검증"}{a.dup>1?` · 동일 이슈 ${a.dup}개 매체`:""}</div></li>)})}</ul>
+        <button className="btn" style={{marginTop:8}} onClick={()=>go("competitors")}>경쟁사 활동 전체 보기</button>
+      </Card>
+      <Card title="AI 핵심 인사이트" right={<Demo/>}>
+        {INSIGHTS.map((i,k)=>(<div key={k} style={{padding:"8px 0",borderTop:k?"1px solid var(--line)":0}}>
+          <span className="tag infer">AI 해석</span><p style={{margin:"6px 0 2px"}}>{i.t}</p><div className="src">근거: {i.ev}</div></div>))}
+        <div className="src">AI 브리핑은 Claude API 연결 후 자동 생성됩니다. 지금은 형식 확인용 문안입니다.</div>
+      </Card>
+    </div>
+    <div className="grid g2" style={{marginTop:14}}>
+      <Card title="검색 관심도 변화 (미국 · 30일)" right={<Demo/>}>
+        {KEYWORDS.slice(0,4).map(k=>{const first=trend[0][k.id],last=trend[trend.length-1][k.id];return(
+          <div key={k.id} style={{display:"grid",gridTemplateColumns:"minmax(78px,110px) minmax(0,1fr) 54px",gap:10,alignItems:"center",padding:"3px 0"}}>
+            <span className="meta">{k.label}</span><Spark data={trend} id={k.id} color={k.color}/>
+            <b className="num" style={{textAlign:"right",fontSize:13}}>{last}<span style={{color:last>=first?"var(--good)":"var(--bad)",marginLeft:3}}>{last>=first?"▲":"▼"}</span></b></div>)})}
+        <div className="src">출처: DEMO(Google Trends 형식) · 기준일 {AS_OF} · 단위: 상대 관심도 지수(0–100). 실제 검색량·이용자 수·시장 규모가 아닙니다.</div>
+      </Card>
+      <Card title="북미 이용자 주요 반응" right={<Demo/>}>
+        <div className="bar" role="img" aria-label="긍정 41%, 중립 22%, 부정 37%">{SENT.map(s=>(<div key={s.n} style={{width:s.v+"%",background:s.c}}/>))}</div>
+        <div className="meta num" style={{display:"flex",gap:14,flexWrap:"wrap",margin:"8px 0 14px"}}>{SENT.map(s=>(<span key={s.n}><i style={{display:"inline-block",width:8,height:8,borderRadius:"50%",background:s.c,marginRight:5}}/>{s.n} {s.v}%</span>))}</div>
+        <div className="meta" style={{marginBottom:8}}>주제별 언급 비중 (표본 대비 %)</div>
+        <HBars rows={THEMES}/>
+        <div className="src">표본 {REVIEW.n}건 · 수집기간 {REVIEW.period} · {REVIEW.note}</div>
+      </Card>
+    </div>
+  </div>);
+}
+
+/* ================= 탭: Market Trends ================= */
+function Trends(){
+  const [country,setCountry]=useState("US");
+  const [period,setPeriod]=useState("30d");
+  const [sel,setSel]=useState(["webtoon","manhwa","manga"]);
+  const days=PERIODS.find(p=>p.id===period).days;
+  const data=useMemo(()=>buildTrend(country,days),[country,days]);
+  const keys=KEYWORDS.filter(k=>sel.includes(k.id));
+  const evs=EVENTS.filter(e=>e.date>=data[0].date&&e.date<=data[data.length-1].date);
+  const toggle=id=>setSel(s=>s.includes(id)?(s.length>1?s.filter(x=>x!==id):s):[...s,id]);
+  const stats=keys.map(k=>{const f=data[0][k.id],l=data[data.length-1][k.id];return{k,f,l,d:l-f}});
+  return(<div>
+    <Head mixed title="Market Trends" desc="키워드별 검색 관심도는 DEMO, 관련 뉴스는 REAL"/>
+    <Notice info>검색 관심도는 <b>상대 지수</b>입니다. 실제 검색량, 이용자 수, 시장 규모로 해석하지 않습니다.</Notice>
+    <Card>
+      <div className="toolbar">
+        <div className="group"><label>국가</label>{COUNTRIES.map(c=>(<button key={c.id} className={"chip"+(country===c.id?" on":"")} onClick={()=>setCountry(c.id)} aria-pressed={country===c.id}>{c.label}</button>))}</div>
+        <div className="group"><label>기간</label>{PERIODS.map(p=>(<button key={p.id} className={"chip"+(period===p.id?" on":"")} onClick={()=>setPeriod(p.id)} aria-pressed={period===p.id}>{p.label}</button>))}</div>
+      </div>
+      <div className="group" style={{marginTop:10}}><label>키워드</label>{KEYWORDS.map(k=>{const on=sel.includes(k.id);return(
+        <button key={k.id} className="chip" aria-pressed={on} onClick={()=>toggle(k.id)} style={on?{background:k.color,borderColor:k.color,color:"#fff"}:{}}>{k.label}</button>)})}</div>
+    </Card>
+    <Card className="" title={`키워드별 관심도 · ${COUNTRIES.find(c=>c.id===country).label} · 최근 ${PERIODS.find(p=>p.id===period).label}`} right={<Demo/>}>
+      <div style={{marginTop:2}}/>
+      <LineChart data={data} keys={keys} events={EVENTS}/>
+      <div className="meta" style={{display:"flex",gap:14,flexWrap:"wrap",marginTop:6}}>{keys.map(k=>(<span key={k.id}><i style={{display:"inline-block",width:10,height:3,background:k.color,marginRight:5,verticalAlign:"middle"}}/>{k.label}</span>))}<span><i style={{display:"inline-block",width:8,height:8,borderRadius:"50%",background:"#f59e0b",marginRight:5}}/>주요 변화 시점</span></div>
+      <div className="src">출처: DEMO(가상 곡선) · 기준일 {AS_OF} · 단위: 상대 관심도 지수(0–100). 그래프 위에 마우스를 올리거나 터치하면 값을 볼 수 있습니다.</div>
+    </Card>
+    <div className="grid g3" style={{marginTop:14}}>
+      <Card title="기간 내 변화" right={<Demo/>}>
+        <ul className="list">{stats.map(s=>(<li key={s.k.id} style={{display:"flex",justifyContent:"space-between",gap:8}}>
+          <span>{s.k.label}</span><span className="num"><b>{s.l}</b> <span style={{color:s.d>=0?"var(--good)":"var(--bad)"}}>{s.d>=0?"+":""}{s.d}</span></span></li>))}</ul>
+        <div className="src">시작 시점 대비 지수 차이</div>
+      </Card>
+      <Card title="주요 변화 시점" right={<Demo/>}>
+        {evs.length===0?<div className="meta">선택한 기간에 표시할 변화 시점이 없습니다. 기간을 늘려 보세요.</div>:
+        <ul className="list">{evs.map(e=>(<li key={e.date}><b className="num">{e.date}</b><div className="meta">{e.label}</div></li>))}</ul>}
+      </Card>
+      <Card title="관련 뉴스" right={<Real/>}>
+        <ul className="list">{REAL_ARTICLES.slice(0,4).map(a=>(<li key={a.id}><a href={a.url} target="_blank" rel="noreferrer">{a.title}</a><div className="meta">{a.source} · {a.publishedAt}</div></li>))}</ul>
+        <div className="src">최근 실제 뉴스입니다. DEMO 관심도 곡선과 시점을 연결하지 않았습니다.</div>
+      </Card>
+    </div>
+  </div>);
+}
+
+/* ================= 탭: Competitor Watch ================= */
+const FEEDS=[
+  ["WEBTOON","https://news.google.com/rss/search?q=%22WEBTOON+Entertainment%22+OR+%22Naver+Webtoon%22+when:30d&hl=en-US&gl=US&ceid=US:en"],
+  ["Tapas","https://news.google.com/rss/search?q=%22Tapas%22+(webtoon+OR+webcomics+OR+Kakao)+when:30d&hl=en-US&gl=US&ceid=US:en"],
+  ["Manta","https://news.google.com/rss/search?q=%22Manta%22+(webtoon+OR+manga+OR+Ridi)+when:30d&hl=en-US&gl=US&ceid=US:en"],
+  ["Tappytoon","https://news.google.com/rss/search?q=%22Tappytoon%22+when:30d&hl=en-US&gl=US&ceid=US:en"],
+];
+function CopyBtn({text}){
+  const [s,setS]=useState("복사");
+  const go=async()=>{try{await navigator.clipboard.writeText(text);setS("복사됨")}catch(e){setS("직접 선택해 복사하세요")}setTimeout(()=>setS("복사"),2000)};
+  return <button className="btn" onClick={go}>{s}</button>;
+}
+function Competitors({feed}){
+  const [comp,setComp]=useState("all");
+  const [type,setType]=useState("all");
+  const [mode,setMode]=useState("real");
+  const [q,setQ]=useState("");
+  const rss=feed.articles;
+  const rssStatus=feed.status==="loaded"
+    ? "마지막 수집: "+rssDate(feed.updatedAt)+" · RSS "+rss.length+"건"
+    : feed.status==="loading"?"불러오는 중":"자동 수집 데이터를 불러오지 못했습니다.";
+  const allArticles=useMemo(()=>[...rss,...ARTICLES],[rss]);
+  const list=useMemo(()=>allArticles.filter(a=>(mode==="all"||(mode==="real"?a.real:!a.real))&&(comp==="all"||a.competitor===comp)&&(type==="all"||a.type===type)&&(!q||(a.title+a.titleKo+a.summary).toLowerCase().includes(q.toLowerCase()))).sort((x,y)=>y.publishedAt.localeCompare(x.publishedAt)),[comp,type,mode,q,allArticles]);
+  const cnt=(id,r)=>allArticles.filter(a=>a.competitor===id&&a.real===r).length;
+  return(<div>
+    <Head mixed title="Competitor Watch" desc="경쟁 플랫폼별 활동 타임라인 (REAL 뉴스 + DEMO 예시)"/>
+    <Notice><b>검증 뉴스</b>는 2026-10-30 당시 수동 확인한 기사입니다. <b>RSS 수집</b>은 Google News 검색 피드의 제목·링크·발행일만 자동 수집한 자료로, 원문 사실관계는 검증되지 않았습니다. <b>DEMO</b>는 가상 예시입니다.<div className="meta" style={{marginTop:6}}>{rssStatus}</div></Notice>
+    <div className="grid" style={{gridTemplateColumns:"repeat(auto-fit,minmax(150px,1fr))"}}>{COMPETITORS.map(c=>(
+      <button key={c.id} onClick={()=>setComp(comp===c.id?"all":c.id)} aria-pressed={comp===c.id} className="card" style={{textAlign:"left",borderColor:comp===c.id?"var(--accent)":"var(--line)",boxShadow:comp===c.id?"0 0 0 1px var(--accent)":"none"}}>
+        <div style={{display:"flex",alignItems:"center",gap:8,fontWeight:700}}><i style={{width:10,height:10,borderRadius:"50%",background:c.color}}/>{c.name}</div>
+        <div className="meta num">REAL {cnt(c.id,true)}건 · DEMO {cnt(c.id,false)}건</div></button>))}</div>
+    <Card className="">
+      <div className="toolbar">
+        <div className="group"><label>데이터</label>{[["real","REAL만"],["demo","DEMO만"],["all","전체"]].map(([id,l])=>(<button key={id} className={"chip"+(mode===id?" on":"")} aria-pressed={mode===id} onClick={()=>setMode(id)}>{l}</button>))}</div>
+        <input id="comp-q" className="input" style={{flex:"1 1 200px"}} placeholder="제목·요약 검색" value={q} onChange={e=>setQ(e.target.value)} aria-label="검색"/>
+        <select id="comp-type" className="select" value={type} onChange={e=>setType(e.target.value)} aria-label="활동 유형"><option value="all">전체 활동 유형</option>{TYPES.map(t=>(<option key={t} value={t}>{t}</option>))}</select>
+        <button className="btn" onClick={()=>{setComp("all");setType("all");setQ("");setMode("real")}}>필터 초기화</button>
+        <span className="meta num">{list.length}건</span>
+      </div>
+    </Card>
+    <Card title="활동 타임라인" right={mode==="real"?<Real/>:mode==="demo"?<Demo/>:<><Real/><Demo/></>} className="">
+      {list.length===0?<div className="empty">조건에 맞는 활동이 없습니다. 필터를 초기화해 보세요.</div>:
+      <ul className="tl">{list.map(a=>{const c=COMPETITORS.find(c=>c.id===a.competitor);return(
+        <li key={a.id} style={{"--dot":c.color}}>
+          <div className="meta" style={{display:"flex",gap:6,flexWrap:"wrap",alignItems:"center"}}><b className="num" style={{color:"var(--ink)"}}>{a.publishedAt}</b>{a.rss?<span className="tag infer">RSS · 미검증</span>:a.real?<Real/>:<Demo/>}<span className="tag">{c.name}</span><span className="tag gray">{a.type}</span>{a.dup>1&&<span className="tag infer">동일 이슈 {a.dup}개 매체</span>}</div>
+          <a href={a.url} target="_blank" rel="noreferrer" style={{color:"var(--accent)",fontWeight:600,textDecoration:"none",display:"block",marginTop:3}}>{a.rss?a.titleKo:a.title}</a>
+          <div className="meta">{a.rss?a.title:a.titleKo}</div><div className="meta">{a.rss?"RSS 안내: ":a.real?"요약(Claude 작성): ":""}{a.summary}</div>
+          <div className="src">출처 {a.source} · 원문 발행 {a.publishedAt} · 수집 {a.collectedAt}{a.rss?" · RSS 제목 기반 분류 · 원문 미검증 · 자동 번역은 오류 가능":a.real?" · 활동 유형은 Claude가 분류":""}</div></li>)})}</ul>}
+    </Card>
+    <div className="grid g2" style={{marginTop:14}}>
+      <Card title="뉴스 수집 안내" right={<span className="tag infer">자동 RSS</span>}>
+        <div className="meta">{rssStatus}</div><ul className="list">
+          <li><b>Google News RSS (작업 환경에서 호출)</b><div className="meta"><span className="fail">실패</span> · 접속이 거부되어 0건 수집</div></li>
+          <li><b>Google News RSS (이 페이지에서 직접 호출)</b><div className="meta"><span className="fail">불가</span> · Artifact 페이지는 외부 서버로 요청을 보낼 수 없습니다</div></li>
+          <li><b>웹 검색 후 원문 열람 (대체 방식)</b><div className="meta"><span className="ok">성공 5건</span> + 후속 검증 중 1건(r6) 추가 · 원문 열람 실패 1건은 제외 · 일회성 수동 수집이며 자동 갱신 아님</div></li>
+        </ul>
+        <div className="src">REAL 뉴스가 {REAL_ARTICLES.length}건뿐인 것은 시장 전체의 기사량이 아니라 이번 수집의 범위입니다.</div>
+      </Card>
+      <Card title="RSS 피드 구성 (Phase 2용, 미검증)" right={<span className="demo">미연결</span>}>
+        <div style={{display:"grid",gap:10}}>{FEEDS.map(([n,u])=>(<div key={n}><div style={{display:"flex",justifyContent:"space-between",alignItems:"center",gap:8,marginBottom:4}}><b>{n}</b><CopyBtn text={u}/></div><code className="code">{u}</code></div>))}</div>
+        <div className="src">이 환경에서 접속할 수 없어 주소가 실제로 동작하는지는 확인하지 못했습니다. 서버에서 수집하는 단계에서 검증합니다.</div>
+      </Card>
+    </div>
+  </div>);
+}
+
+/* ================= 탭: CRM Strategy Lab ================= */
+const KEY="wp_artifact_crm_v1";
+const blank=()=>({id:"c"+Date.now(),title:"",marketSignal:"",segment:"",problem:"",hypothesis:"",action:"",abTest:"",kpi:"",requiredData:"",evidence:"",status:"아이디어"});
+function CrmLab(){
+  const [cards,setCards]=useState(SEED_CARDS);
+  const [ready,setReady]=useState(false);
+  const [q,setQ]=useState("");const [st,setSt]=useState("all");
+  const [edit,setEdit]=useState(null);
+  const [delId,setDelId]=useState(null);
+  const [resetAsk,setResetAsk]=useState(false);
+  useEffect(()=>{try{const r=localStorage.getItem(KEY);let base=r?JSON.parse(r):null;if(base){const add=SEED_CARDS.filter(c=>c.real&&!base.some(b=>b.id===c.id)&&localStorage.getItem(KEY+"_dis_"+c.id)!=="1");if(add.length)base=[...add,...base]}if(base)setCards(base)}catch(e){}setReady(true)},[]);
+  useEffect(()=>{if(!ready)return;try{localStorage.setItem(KEY,JSON.stringify(cards))}catch(e){}},[cards,ready]);
+  const list=useMemo(()=>cards.filter(c=>(st==="all"||c.status===st)&&(!q||JSON.stringify(c).toLowerCase().includes(q.toLowerCase()))),[cards,q,st]);
+  const save=()=>{if(!edit||!edit.title.trim())return;setCards(cs=>cs.some(c=>c.id===edit.id)?cs.map(c=>c.id===edit.id?edit:c):[edit,...cs]);setEdit(null)};
+  const tone=s=>s==="아이디어"?"tag gray":s==="검토"?"tag":"tag infer";
+  return(<div>
+    <Head title="CRM Strategy Lab" desc="시장 신호를 검증 가능한 CRM 가설로 정리합니다. 카드를 추가, 수정, 검색할 수 있습니다."/>
+    <Notice>모든 카드는 <b>미검증 가설</b>입니다. 실험 결과가 없으므로 성과가 입증된 전략으로 표시하지 않습니다. 카드는 이 브라우저에만 저장되며, 저장소를 쓸 수 없는 환경에서는 창을 닫으면 사라질 수 있습니다.</Notice>
+    <Card>
+      <div className="toolbar">
+        <input id="crm-q" className="input" style={{flex:"1 1 200px"}} placeholder="카드 검색" value={q} onChange={e=>setQ(e.target.value)} aria-label="카드 검색"/>
+        <select id="crm-st" className="select" value={st} onChange={e=>setSt(e.target.value)} aria-label="상태 필터"><option value="all">전체 상태</option>{STATUSES.map(s=>(<option key={s}>{s}</option>))}</select>
+        <span className="meta num">{list.length}개</span>
+        <span style={{marginLeft:"auto",display:"flex",gap:8,flexWrap:"wrap"}}>
+          {resetAsk?(<><span className="meta" style={{alignSelf:"center"}}>저장한 카드가 사라집니다.</span><button className="btn" onClick={()=>{setCards(SEED_CARDS);setResetAsk(false)}}>초기화 확인</button><button className="btn" onClick={()=>setResetAsk(false)}>취소</button></>):
+          <button className="btn" onClick={()=>setResetAsk(true)}>DEMO 카드로 초기화</button>}
+          <button className="btn pri" onClick={()=>setEdit(blank())}>+ 새 카드</button>
+        </span>
+      </div>
+    </Card>
+    <div className="cardgrid" style={{marginTop:14}}>
+      {list.map(c=>(<section className="card" key={c.id}>
+        <h3><span style={{display:"flex",gap:6,alignItems:"center",flexWrap:"wrap"}}>{c.title}{c.title.includes("[DEMO]")&&<Demo/>}{c.real&&<span className="real">근거 REAL</span>}</span><span className={tone(c.status)}>{c.status}</span></h3>
+        <dl>{FIELDS.map(([k,l])=>(<React.Fragment key={k}><dt>{l}</dt><dd>{c[k]||"—"}</dd></React.Fragment>))}</dl>
+        <div style={{display:"flex",gap:8,marginTop:12}}>
+          <button className="btn" onClick={()=>setEdit(c)}>수정</button>
+          {delId===c.id?(<><button className="btn" style={{color:"var(--bad)"}} onClick={()=>{setCards(cs=>cs.filter(x=>x.id!==c.id));try{localStorage.setItem(KEY+"_dis_"+c.id,"1")}catch(e){}setDelId(null)}}>삭제 확인</button><button className="btn" onClick={()=>setDelId(null)}>취소</button></>):
+          <button className="btn" onClick={()=>setDelId(c.id)}>삭제</button>}
+        </div></section>))}
+    </div>
+    {list.length===0&&<div className="empty">조건에 맞는 카드가 없습니다. ‘+ 새 카드’로 가설을 추가해 보세요.</div>}
+    {edit&&(<div className="modalbg" onClick={()=>setEdit(null)}><div className="modal" role="dialog" aria-modal="true" aria-label="전략 카드 편집" onClick={e=>e.stopPropagation()}>
+      <h3 style={{margin:0,fontSize:16}}>전략 카드 {cards.some(c=>c.id===edit.id)?"수정":"작성"}</h3>
+      <label htmlFor="f-title">제목</label><input id="f-title" className="input" value={edit.title} onChange={e=>setEdit({...edit,title:e.target.value})}/>
+      {FIELDS.map(([k,l,long])=>(<div key={k}><label htmlFor={"f-"+k}>{l}</label>{long?<textarea id={"f-"+k} rows="2" className="ta" value={edit[k]} onChange={e=>setEdit({...edit,[k]:e.target.value})}/>:<input id={"f-"+k} className="input" value={edit[k]} onChange={e=>setEdit({...edit,[k]:e.target.value})}/>}</div>))}
+      <label htmlFor="f-status">Status</label><select id="f-status" className="select" value={edit.status} onChange={e=>setEdit({...edit,status:e.target.value})}>{STATUSES.map(s=>(<option key={s}>{s}</option>))}</select>
+      <div style={{display:"flex",justifyContent:"flex-end",gap:8,marginTop:16}}><button className="btn" onClick={()=>setEdit(null)}>취소</button><button className="btn pri" disabled={!edit.title.trim()} onClick={save}>저장</button></div>
+    </div></div>)}
+  </div>);
+}
+
+/* ================= 앱 셸 ================= */
+const TABS=[{id:"overview",label:"Overview"},{id:"trends",label:"Market Trends"},{id:"competitors",label:"Competitor Watch"},{id:"crm",label:"CRM Strategy Lab"}];
+function App(){
+  const feed=useNewsFeed();
+  const fromHash=()=>{const h=(location.hash||"").slice(1);return TABS.some(t=>t.id===h)?h:"overview"};
+  const [tab,setTab]=useState(fromHash);
+  useEffect(()=>{const f=()=>setTab(fromHash());window.addEventListener("hashchange",f);return()=>window.removeEventListener("hashchange",f)},[]);
+  const go=id=>{setTab(id);try{location.hash=id}catch(e){}window.scrollTo({top:0})};
+  const nav=(cls)=>TABS.map(t=>(<button key={t.id} className={cls?cls+(tab===t.id?" on":""):""} aria-current={tab===t.id?"page":undefined} onClick={()=>go(t.id)}>{t.label}</button>));
+  return(<div className="shell">
+    <aside className="side">
+      <div className="brand"><b>WEBTOON Pulse</b><span>North America Market Intelligence</span></div>
+      <nav className="nav" aria-label="메뉴">{nav("")}</nav>
+      <div className="status"><b>데이터 상태 <span className="real">REAL</span> <span className="demo">DEMO</span></b><div>수동 검증 {REAL_ARTICLES.length}건 · RSS 미검증 {feed.articles.length}건</div><div>RSS 최신 수집: {feed.status==="loaded"?rssDate(feed.updatedAt):feed.status==="loading"?"확인 중":"불러오기 실패"}</div><div>수동 검증 기준: 2026-10-30</div></div>
+    </aside>
+    <div className="main">
+      <nav className="mtabs" aria-label="메뉴 (모바일)">{nav("chip")}</nav>
+      {tab==="overview"&&<Overview go={go} feed={feed}/>}
+      {tab==="trends"&&<Trends/>}
+      {tab==="competitors"&&<Competitors feed={feed}/>}
+      {tab==="crm"&&<CrmLab/>}
+      <footer>WEBTOON Pulse · Artifact 미리보기 · 수동 검증 뉴스와 RSS 자동 수집(원문 미검증)을 구분합니다. 시장 지표는 DEMO(가상 예시)입니다.</footer>
+    </div>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+
+</body></html>
