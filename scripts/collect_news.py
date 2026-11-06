@@ -77,8 +77,8 @@ def translate(title):
                 and korean.casefold() != title.casefold()
                 and 'MYMEMORY WARNING' not in korean.upper()):
             return korean, 'machine_mymemory'
-    except (OSError, ValueError, TypeError, KeyError, AttributeError):
-        pass
+    except (OSError, ValueError, TypeError, KeyError, AttributeError) as e:
+    print(f"MyMemory translation failed: {type(e).__name__}: {e}")
     return title, 'unavailable'
 
 
