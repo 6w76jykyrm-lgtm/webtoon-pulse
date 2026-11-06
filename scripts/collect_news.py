@@ -64,8 +64,8 @@ def translate(title):
         korean = ''.join(part[0] for part in result[0] if part and isinstance(part[0], str)).strip()
         if korean and korean.casefold() != title.casefold():
             return korean, 'machine_google'
-    except (OSError, ValueError, IndexError, TypeError, KeyError):
-        pass
+  except (OSError, ValueError, IndexError, TypeError, KeyError) as e:
+    print(f"Google translation failed: {type(e).__name__}: {e}")
 
     # Provider 2: MyMemory public translation endpoint; subject to free rate limits.
     try:
