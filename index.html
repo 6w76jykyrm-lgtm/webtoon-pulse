@@ -327,7 +327,7 @@ function Overview({go,feed}){
   const trend=useMemo(()=>buildTrend("US",30),[]);
   return(<div>
     <Head mixed title="Executive Overview" desc={"북미 웹툰 시장 요약 · RSS 최신 수집 "+(feed.status==="loaded"?rssDate(feed.updatedAt):feed.status==="loading"?"확인 중":"불러오기 실패")+" · 시장 지표 DEMO"}/>
-    <Notice><b>REAL DATA</b> 중 수동 원문 확인 뉴스는 {REAL_ARTICLES.length}건(2026-10-30 확인), 자동 RSS 뉴스는 {feed.articles.length}건(원문 미검증)입니다. 키워드 관심도, 이용자 반응, AI 인사이트 등 나머지는 모두 <b>DEMO(가상 예시)</b>입니다.</Notice>
+    <Notice><b>뉴스 데이터 현황</b> · 최신 RSS 수집: {feed.status==="loaded"?rssDate(feed.updatedAt):feed.status==="loading"?"확인 중":"불러오기 실패"} ({feed.articles.length}건, 원문 미검증) · 별도 수동 검증 뉴스: {REAL_ARTICLES.length}건 (2026-10-30 확인). 키워드 관심도, 이용자 반응, AI 인사이트는 <b>DEMO(가상 예시)</b>입니다.</Notice>
     <div className="grid g4">{KPIS.map(k=>(
       <div className="card kpi" key={k.l}>
         <div className="lab"><span>{k.l}</span>{k.real?<Real/>:<Demo/>}</div>
