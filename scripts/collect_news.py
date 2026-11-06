@@ -52,15 +52,32 @@ def get(url):
 
 
 def translate(title):
-    """Best-effort unofficial translation; original title remains on failure."""
+    """Best-effort Korean headline translation with two no-key endpoints.
+
+    Neither endpoint has an availability guarantee; retain English on failure.
+    """
+    # Provider 1: unofficial Google Translate endpoint (already used by this project).
     try:
         url = 'https://translate.googleapis.com/translate_a/single?' + urllib.parse.urlencode({
-            'client': 'gtx', 'sl': 'auto', 'tl': 'ko', 'dt': 't', 'q': title})
+            'client': 'gtx', 'sl': 'en', 'tl': 'ko', 'dt': 't', 'q': title})
         result = json.loads(get(url).decode('utf-8'))
         korean = ''.join(part[0] for part in result[0] if part and isinstance(part[0], str)).strip()
         if korean and korean.casefold() != title.casefold():
-            return korean, 'machine'
+            return korean, 'machine_google'
     except (OSError, ValueError, IndexError, TypeError, KeyError):
+        pass
+
+    # Provider 2: MyMemory public translation endpoint; subject to free rate limits.
+    try:
+        url = 'https://api.mymemory.translated.net/get?' + urllib.parse.urlencode({
+            'q': title[:450], 'langpair': 'en|ko'})
+        result = json.loads(get(url).decode('utf-8'))
+        korean = (result.get('responseData') or {}).get('translatedText', '').strip()
+        if (result.get('responseStatus') == 200 and korean
+                and korean.casefold() != title.casefold()
+                and 'MYMEMORY WARNING' not in korean.upper()):
+            return korean, 'machine_mymemory'
+    except (OSError, ValueError, TypeError, KeyError, AttributeError):
         pass
     return title, 'unavailable'
 
@@ -77,74 +94,3 @@ def relevant(competitor, headline):
         return False
     if FINANCE.search(headline):
         return False
-    if competitor in UNRELATED and UNRELATED[competitor].search(headline):
-        return False
-    if competitor in ('tapas', 'manta') and not COMICS_CONTEXT.search(headline):
-        return False
-    return True
-
-
-def fetch(competitor, query):
-    url = 'https://news.google.com/rss/search?' + urllib.parse.urlencode({
-        'q': query, 'hl': 'en-US', 'gl': 'US', 'ceid': 'US:en'})
-    items = ET.fromstring(get(url)).findall('./channel/item')
-    results = []
-    for item in items[:50]:
-        title = (item.findtext('title') or '').strip()
-        link = (item.findtext('link') or '').strip()
-        source_node = item.find('source')
-        source = source_node.text.strip() if source_node is not None and source_node.text else 'Google News RSS'
-        if not title or not link.startswith('https://'):
-            continue
-        headline = title.rsplit(' - ', 1)[0]
-        if not relevant(competitor, headline):
-            continue
-        try:
-            published = email.utils.parsedate_to_datetime(item.findtext('pubDate')).date().isoformat()
-        except (TypeError, ValueError, IndexError):
-            continue
-        category = classify(headline)
-        results.append({
-            'id': 'rss-' + hashlib.sha256(link.encode()).hexdigest()[:16],
-            'competitor': competitor, 'type': category, 'category': category,
-            'title': title, 'publishedAt': published, 'url': link,
-            'source': source, 'verificationStatus': 'unverified',
-        })
-    return results
-
-
-def main():
-    articles, errors = [], []
-    for competitor, query in SEARCHES.items():
-        try:
-            found = fetch(competitor, query)
-            print(f'{competitor}: {len(found)} relevant headline candidates')
-            articles.extend(found)
-        except Exception as exc:
-            errors.append(f'{competitor}: {type(exc).__name__}: {exc}')
-    if not articles:
-        raise SystemExit('No matching RSS items; existing data preserved. ' + '; '.join(errors))
-
-    unique = {article['url']: article for article in articles}
-    for article in unique.values():
-        article['titleKo'], article['translationStatus'] = translate(article['title'])
-        article['summary'] = (
-            '제목은 자동 번역되었습니다. ' if article['translationStatus'] == 'machine'
-            else '한국어 번역을 가져오지 못했습니다. '
-        ) + 'RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다.'
-        time.sleep(0.15)
-
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps({
-        'updatedAt': dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds'),
-        'source': 'Google News RSS metadata (unverified); headline machine translation (unofficial)',
-        'articles': sorted(unique.values(), key=lambda a: a['publishedAt'], reverse=True),
-        'errors': errors,
-    }, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    print(f'Saved {len(unique)} headlines; translated '
-          f'{sum(a["translationStatus"] == "machine" for a in unique.values())}; '
-          f'feed errors {len(errors)}')
-
-
-if __name__ == '__main__':
-    main()
