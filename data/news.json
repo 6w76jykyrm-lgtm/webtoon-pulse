@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T05:09:29+00:00",
+  "updatedAt": "2026-11-06T05:57:44.162629+00:00",
   "source": "Google News RSS metadata (unverified); headline machine translation (unofficial)",
   "articles": [
     {
@@ -12,9 +12,9 @@
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOb3BPSHM5Y25PV3h1dVg5MTZNWE9SWGVzZW85WHY2RUYtSTVYUHJKWGxoWlBhTENtTzZoZnNGcnE1ZHlPbUJaaXRRX1YyaGttdW5qM3F2ZHhiRUNFNkFiN1I2Z2VnOVlxdFpTQ1FQR094eEpIRnFoNHZrcE1uaV9zQzJVZDRrNm1kUWNaZ0NtMFhQeHlRRG1RblV3Yw?oc=5",
       "source": "Variety",
       "verificationStatus": "unverified",
-      "titleKo": "The Remarried Empress: Webtoon's TV and Movie Adaptations in Hollywood - Variety",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "재혼한 여제: 할리우드의 웹툰 TV 및 영화 각색 - 버라이어티",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-e436ea9bc29e00bd",
@@ -26,23 +26,9 @@
       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE85VW1HbFRlTUxyT2RUMUdpdm9IeTZfVTR2eFRkdmpta3p2NjlUNVhJOHFIMVVsenEwcEpfWWx2OENtbzEzZkdRTzBsdFJXb0dHUGlEUWFmbnlwc3BzQ3FFNVV1Yzc5eVE?oc=5",
       "source": "IMDb",
       "verificationStatus": "unverified",
-      "titleKo": "With Disney+ and Hulu’s Korean Romantic Epic ‘The Remarried Empress,’ Webtoon Entertainment Enters a New Phase in Hollywood - IMDb",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-7648daa0921fe976",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "Hit Webtoon \"Joyu Shikkaku\" Becomes A Live-Action J-Drama Starring Kayashima Mizuki - MyDramaList News",
-      "publishedAt": "2026-11-05",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOaFpKNmgxTDNNeVhaTmMwZktMNU5LTWZ1OF82RjZMQ2hadU5lUVR2MlJCNHlsZXI2TzhNcE5PSDdEb3IzZGFfNzhuYThCZ0hlYTVBYlZVYldNNFNGal9wb3c0d0ExSmlWbUE2dUFBTThXeXdNNGcwcUtJQnJrUTZSd3k1aGRiTDFQRG9qOE93?oc=5",
-      "source": "MyDramaList News",
-      "verificationStatus": "unverified",
-      "titleKo": "Hit Webtoon \"Joyu Shikkaku\" Becomes A Live-Action J-Drama Starring Kayashima Mizuki - MyDramaList News",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "디즈니 + 와 훌루의 한국 로맨틱 서사시 ‘재혼한 황후’ 를 통해 웹툰 엔터테인먼트가 할리우드에서 새로운 국면을 맞이하다 - IMDb",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-40050940ecbc7f98",
@@ -54,9 +40,9 @@
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNUTRsVi00RkNfb3RpYzFmUEEwUnBIaHI1NXBuQW0wMHFNNGUxYThqYUthMDh6Umw0ZGtiZEhiTFp3bnE5Zl9FdkZPWTBIenFTbHd1d1IyMDJ1cURQdXpqY2xhSUYwREFsOEsxY0xWbXUzZUpMVWNKamFWelVTS29WbUgyTFpGa2FUd2ZZYWtPUFFkeGwxSHJUUDdCRWZOd1ZGaG81ZkI0M2hzNE54MS1tWDFfbGZrVlJyc3c?oc=5",
       "source": "Investing.com",
       "verificationStatus": "unverified",
-      "titleKo": "Webtoon Entertainment faces earnings test amid profitability push - Investing.com",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "웹툰 엔터테인먼트, 수익성 테스트 통과 - Investing.com",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-92960fc3b45c23b0",
@@ -68,23 +54,9 @@
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQ0RhMHBHZVZpOW9INnJpX0J2UXhwWDhwd0tqUWNIbHlCdGJnem5WM3ZnbkgySUoybzk2emY2R0d3eUU5V0d3M1pQUlJiMzktYVVDbHd5R2ppNUpBaXNLaEptUnYyaGFjekVMdUE1OVZaRzFGdS1EaTJ6Um9uckt2TksyUU0tLTRQRE4xTQ?oc=5",
       "source": "The Outerhaven",
       "verificationStatus": "unverified",
-      "titleKo": "The Remarried Empress is Available to Read on WEBTOON - The Outerhaven",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-1498c577ebdbd9b6",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "'Naver Webtoon' Serialization Rights at Stake as 41 Universities Compete in Daejeon Nov. 5–6 - 씨네플레이",
-      "publishedAt": "2026-11-04",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9QTVhHLXNudlFkSC1YbXdSRHAyNFd1NkxuaVBWeWxUN0thNWFpRGJXZ0l3TFRqNXNxcklkeUp6cjVpVHYxZ2FzTVhGWWpuODBmNzNuWUFuNE1vYWs?oc=5",
-      "source": "씨네플레이",
-      "verificationStatus": "unverified",
-      "titleKo": "'Naver Webtoon' Serialization Rights at Stake as 41 Universities Compete in Daejeon Nov. 5–6 - 씨네플레이",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "재혼한 황후는 WEBTOON - The Outerhaven에서 읽을 수 있습니다.",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-8a9c5ada6542a2e0",
@@ -96,9 +68,9 @@
       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5lVS1UZUtUTEszVkRZVE9KMWJ6RUM0OURJV1VjY1F5aHh4dDRCT25PNHVWNWZlUGhpNlRHV19qYW9Mclc1NVdtT2NlTk9NekZlcWJQYTIxTVp4RVZROWhZTGJB?oc=5",
       "source": "Yahoo! Finance Canada",
       "verificationStatus": "unverified",
-      "titleKo": "WEBTOON Entertainment Inc. (WBTN) Seasonal Returns Chart - Yahoo Finance - Yahoo! Finance Canada",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "WEBTOON ENTERTAINMENT INC. (WBTN) 시즌 수익률 차트 - 야후 파이낸스 - 야후! 파이낸스 캐나다",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-c0f7599f4766d8c6",
@@ -110,9 +82,9 @@
       "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOTBKMEg2bmNBZGRrWHNnWTcwUDFLc0dld2FSRHhDcGVJWlctYWQyOFJkbkR6MklKejB6Y3k1d1NUeEFlbzJhUUVXMHFYZGczeURjVWpCbHBKTjJMRmJ3VlpCUnlUYzRvVzlNMmNWSFFERi0yNEFnS3dMaDI0aFhkOXR5dVNNWklmM3RSamhBeUhoVDljTlhTMDJuTlA5TkRpbXR0YUlFWXJGQjlkb0NvazdUY05hU1RXUnBQUjdEUU9BcFFGRVdwVFRSSFo0QdIB0wFBVV95cUxPNTN1VUdXWlVzd25KMi1sVUc1YlR6YnFiWW1MVG1PeGp2YkpoYzk3R1ZvYmJDRmFOZGZPYkRqNllWSHdMekRBYXhHNVRQWllWSUtEZVdad2Vvd1NiX3lMZGFrQmpWQVJiU1B2cXVrdVU2NVdCYU9RcEN3Rk1yOTFnQjVQN1UxZkFKTW1BcUJxZ1FOa0tKeUxTenNXdmtuQ2U1TFdFWFNrN0RMRnNiZS1ZTkpDM1B0MDlyVUFYVG9tUUctWHVqSGhnOEd5eko4Vkd4VlJR?oc=5",
       "source": "The Korea Times",
       "verificationStatus": "unverified",
-      "titleKo": "[INTERVIEW] Korean webtoon finds new audience in India, creator eyes global reach - The Korea Times",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "[INTERVIEW] 한국 웹툰, 인도에서 새로운 잠재고객을 찾다, 전 세계 크리에이터의 시선 - The Korea Times",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-713d7c3e242c28fe",
@@ -124,23 +96,23 @@
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOS0VYZXdhLWVpNGpmTkppdGxBQnl3azJHSzd6OEh1MXFYNjgtVXNQdXlnMHpHYkppUGQySElaZUJYOVZzN0xmQ2ZOMEFFa3pDMDk3aHNNZTcyU1pMb21Za2xwLWFYM05iY0VtNUtobThvajBIWjlyRTQzZlVrRzJuZHpEZHExNnhfOG9xS3pLWWdTcUVfQnRSajBvYXY4b2xOZkx5Tm1KYXVtSG5NMzNmVHdIbDA5d3RReUMyZzczTmpub2Q2b2RsUTZDLUxrTlplYzUwbEFpMUdZWUdTNEE?oc=5",
       "source": "Morningstar",
       "verificationStatus": "unverified",
-      "titleKo": "Did WEBTOON Entertainment Inc. Insiders Breach their Fiduciary Duties to Shareholders? - Morningstar",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "WEBTOON ENTERTAINMENT INC. 내부자가 주주에 대한 수탁자의무를 위반했나요? - Morningstar",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-1badf65480794660",
-      "competitor": "manta",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
+      "competitor": "tapas",
+      "type": "콘텐츠·IP",
+      "category": "콘텐츠·IP",
       "title": "Manta Opens Platform to Independent Creators, Launches Program for Users Who Unlocked Episodes on Tapas to Rebuild Library on Platform - Anime News Network",
       "publishedAt": "2026-10-20",
       "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPTFUzSVFVeXMwaEVKNUt1YkxDUThnYlBIWEl3elhYTWlqQ1FhNjRqckVVTXpJcVJ5dUNSWGU2OUg0Wk81RkhMeVJsbzJBRmdqWlFuTDU5dGdCS1pWWkJDN1JkMFk0RVBwUng3NFE2ei1adzR6bjctazQ0NWg5bWlVVXpWWUpCTzEwLXRSSFFQc1JuQjJlU2JNVjhzOXJKaHBnOE9DdHRWTVFYaU9faERRSmw0NkZ5MnBuVk5jd1JIYTRTTFpyUUNsM3ExYy1kanB2M1p0YlRWYkdPaHFIaHRKbHNWQjh4aGZUR0E?oc=5",
       "source": "Anime News Network",
       "verificationStatus": "unverified",
-      "titleKo": "Manta Opens Platform to Independent Creators, Launches Program for Users Who Unlocked Episodes on Tapas to Rebuild Library on Platform - Anime News Network",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "Manta, 독립 크리에이터를 위한 플랫폼 오픈, 타파스에서 에피소드를 잠금 해제하여 플랫폼에서 라이브러리를 재구축하는 사용자를 위한 프로그램 출시 - Anime News Network",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-f0b372229b342d55",
@@ -152,9 +124,9 @@
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9fRDk2ZHZ5VVJQUVIyWnhWYXZEVi1xRjVMMmdBeFdYZUJnSnhOZC14S2lXTWdBcjE0Z3pTVGoyQi1tWUE4OVlDTFAtYUd1TkliQmlxM0tQN2dZSWJxb0JNYUR6RDVJamxRb2t2bXU0dW1CQU1hT21CU3B30gGOAUFVX3lxTE9CZTVxaTdQdFd6TTlWLU00R200ZGE5WnVjbzItOWlFS3FoRFFnN2xBdXMxMXZFOHVyX29BRVhvUnR1M3dLOVI0cDBPeGtWTjEtNlhsSEtFRlRYd2VJeDNUeUg4cEs1QnFzQk5UY0hYbXJCUXRlZmh2Y1RuZFFfeUVJTXhCbHNmVWh6UE43VUE?oc=5",
       "source": "Chosunbiz",
       "verificationStatus": "unverified",
-      "titleKo": "Naver Webtoon courts North America at NYCC, unveils Marvel app and animations - Chosunbiz",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "네이버 웹툰, NYCC 북미 법정에서 마블 앱과 애니메이션 공개 - Chosunbiz",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-fd2e28f5eacb2f4f",
@@ -166,9 +138,9 @@
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdVBKNnEzUWNCNC1xS2RrZTkzTHVmOGVIYTlkT1hiN0k4cE02dHVWX29jZDhaOGc3Nm0wbXdDZjM1ZktOc2VJMUFCQWEzd3F2ejRsOFZJU2hIbG5DYnkzVnQ3REdCbk1jSjJheUphNVNpbmtRWlQzSmFUTW9xM3RmMXJ6WGRMREYxQ1NmcVVhcnV2Q3JZZWp6aFNoYk5VemFvcnhKbEFRdlc5Q2twOTZsSWFFNDJqWGcxSlI0TnNoX1A?oc=5",
       "source": "디지털투데이",
       "verificationStatus": "unverified",
-      "titleKo": "Webtoon Entertainment joins New York Comic Con, unveils 'Fogland' and Marvel app - 디지털투데이",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "웹툰 엔터테인먼트, 뉴욕 코믹콘 합류, '포그랜드' 와 마블 앱 공개 - 디지털투데이",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-3cd0ab4c2aabeeff",
@@ -180,9 +152,9 @@
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQRkRnLVdjQ19KbklMMEJweDd6SG95a1ZrRDNnV3BpRGN2Uld0c3BqN1pzTGpJSjV1NHp3OThNSHVrZ0wtdlA2enFVcFZXVE9hV1RtWDFPdV9wMFROdmwxX1NxazRUS0xKaUc2aHpmZW1sVkdxSkFOc0tIaUtGcTBQb3pOYXF4bFBGT2NMWDJVTXhJUlBrdzd2VDhJbHlnTXNGMW1SRWZJWGIwQQ?oc=5",
       "source": "GeekTyrant",
       "verificationStatus": "unverified",
-      "titleKo": "Marvel and WEBTOON Launch a New Comics App as Marvel Unlimited Comes to an End - GeekTyrant",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "Marvel과 WEBTOON, Marvel Unlimited가 끝나면서 새로운 만화 앱 출시 - GeekTyrant",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-126b12e449bf6ae7",
@@ -194,9 +166,9 @@
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOenkwZ0xkWkF4MVFDemI4NGpxZ1Ftb2R1RnhuWi02SFhpQy12czczZnBsVnVtWXpHMXVheG0xdFpwVElob2c5ODNwQkg3QWR6R2JrT3hLLTV0Q1dxUlMxRnZJMFRKTnNudVZ5eGdmMGVpb0tzbENIdDdBak5YN3lEZlgwdk9EMWJSUVpWYUJlZHQyZjdYeHpPZ3l5aHJhS1l6c0E?oc=5",
       "source": "Bleeding Cool News",
       "verificationStatus": "unverified",
-      "titleKo": "NYCC: Gotham By Daylight by Mike Birchall from DC Comics and Webtoon - Bleeding Cool News",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "NYCC: DC 코믹스 및 웹툰의 Mike Birchall의 Gotham By Daylight - Bleeding Cool News",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-f0cd7f021f61bfaf",
@@ -208,9 +180,9 @@
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQTFfdUZuX2pRUVd6OV8yeC1VVW9HcTVoM1ZFZFZzTXA1cEZmOW54NFJ0VWVGRGdjNW5DV0ZfOGl0TVJuT1k0akpYaXZTbURzYVFSLVFKV1Z2UWxicEhCTUoxWDlSdmlaRHY1ek1Odi1uZGZ4V2lLRkVuWmZDY0swbjVrSnkyV01IQllRRE5Oc2ZDblcwUHQ2aEdwd2M0Tl9MMEFRMFhSMkRLY3Zz?oc=5",
       "source": "Anime News Network",
       "verificationStatus": "unverified",
-      "titleKo": "WEBTOON to Launch New Marvel Comics App in November - Anime News Network",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "웹툰, 11월 새로운 마블 코믹스 앱 출시 예정 - 애니메이션 뉴스 네트워크",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-68bbd200ec0193b8",
@@ -222,9 +194,9 @@
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE45WnV2ME1sZGVrSVhMTHpQU2t3Mm9vWk1MLWhORFZDMFA1QktURDhwLUZqQmlRUlhaMzB0ME95ZlN1ZDEtZFB2SmdfX0RhMjFEX1pjQmFB?oc=5",
       "source": "Webtoon",
       "verificationStatus": "unverified",
-      "titleKo": "WEBTOON Expands Global IP Business with Strategic Investment in RI Games Holdings Inc. - Webtoon",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "웹툰, RI Games Holdings Inc. 에 전략적 투자로 글로벌 IP 사업 확장 - 웹툰",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-46e5dbe5395a7fb3",
@@ -236,9 +208,9 @@
       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBYcW82cWFaR2Q0NjMyb3RfcGZRcjVEUTRIVFMwT0xma2pqa1Zpd0ctMXFwYXdSdlBpX0VOeVhTUHdRWXc0UExROWJRZTh4aUhLU3o4YjNHMk5FTVVvZGNDV21GcHhRSUowa3Rn?oc=5",
       "source": "머니투데이",
       "verificationStatus": "unverified",
-      "titleKo": "[Exclusive] Kakao Entertainment to liquidate translation subsidiary following Tapas, affecting approximately 30 employees - 머니투데이",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "[독점] 카카오엔터테인먼트, 타파스에 이어 번역 자회사 청산, 직원 약 30명 영향 - 머니투데이",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-050b8937bf6d2176",
@@ -250,9 +222,9 @@
       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE95WWpJZlhmY0NzN29XZWFjTFFxY1Q0bldXTjZUZ3NwSmNxNzBWdjVuQUItQ19WWE9COFp4bzhuYlZKNUh0SllRTUwwOHJvWTg5dkk1bUVR?oc=5",
       "source": "Webtoon",
       "verificationStatus": "unverified",
-      "titleKo": "WEBTOON Entertainment Brings Major Content Announcements, First Looks, and Creator Panels to San Diego Comic-Con 2026 - Webtoon",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "웹툰 엔터테인먼트, 샌디에이고 코믹콘 2026에 주요 콘텐츠 발표, 퍼스트 룩, 크리에이터 패널 제공 - 웹툰",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-83903b99ca4da3de",
@@ -264,10 +236,9 @@
       "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPRVNYUmYyNWJqVWZnYkVKUVpCbWVSM3JneFUzaWlBSXJUWjRvWkRLbVJRam1hRnRUTHdyckZjbTdaeXZIYVRwT1A4bmhNSDREZmxEQWxwazF5dm5YT2pKQVJXRzU5TlJBd21Ob3I3R2hYbmZ3WDB6cTdZWTQ4ZENIN3RDNHUtNmRyRWJfaWdIQU5aZkdGV2ZaVUhvaXdRUzhldzNKTFFUbXI1OWt2QkdzNWZfdjdsVmpoZFdrYUFVSEZ6dVhJeDdPakR2VTRwRmw3akZESFU4TFhQU2JxdDJWRVl3ZlNUV0ZodExHRWJrWHdRcXhJM3BjaUEzQ0F2cmsyNHNzUlBpZHN1WHdRYkRReA?oc=5",
       "source": "The Derrick",
       "verificationStatus": "unverified",
-      "titleKo": "Marvel Unlimited is shutting down after 19 years, will be replaced by Webtoon comics app - The Derrick",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "마블 언리미티드 (Marvel Unlimited) 는 19년 후 종료되며, 웹툰 만화 앱 - 더 데릭 (The Derrick) 으로 대체됩니다.",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     }
-  ],
-  "errors": []
+  ]
 }
