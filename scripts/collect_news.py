@@ -1,7 +1,15 @@
-                                 r'financial results|stock|shares|nasdaq|analyst|'
-                                 r'investor|price target|EPS|revenue|profit|loss)\b', re.I)),
-    ('콘텐츠·IP', re.compile(r'\b(series|episode|chapter|adaptation|anime|'
-                            r'new title|originals|creator|artist|comic|manhwa|manga)\b', re.I)),
+UNRELATED = {
+    'tapas': re.compile(r'\b(restaurants?|recipes?|food|dishes|bars?|wine|spanish cuisine)\b', re.I),
+    'manta': re.compile(r'\b(manta rays?|diving|snorkeling|ocean|marine|fish|resort)\b', re.I),
+}
+FINANCE = re.compile(
+    r'\b(financial results|stock|shares|nasdaq|analyst|investor|price target|'
+    r'EPS|quarterly earnings|stock price)\b', re.I)
+CATEGORIES = [
+    ('비즈니스·전략', re.compile(r'\b(partnership|acquisition|expansion|launch|subscription|'
+                                   r'membership|monetization|business|strategy)\b', re.I)),
+    ('콘텐츠·IP', re.compile(r'\b(series|episode|chapter|adaptation|anime|new title|'
+                              r'originals|creator|artist|comic|manhwa|manga)\b', re.I)),
 ]
 
 
@@ -12,14 +20,14 @@ def get(url):
 
 
 def translate(title):
-    """Best-effort unofficial machine translation; fall back to original title."""
+    """Best-effort unofficial translation; original title remains on failure."""
     try:
         url = 'https://translate.googleapis.com/translate_a/single?' + urllib.parse.urlencode({
             'client': 'gtx', 'sl': 'auto', 'tl': 'ko', 'dt': 't', 'q': title})
         result = json.loads(get(url).decode('utf-8'))
-        ko = ''.join(part[0] for part in result[0] if part and isinstance(part[0], str)).strip()
-        if ko and ko.casefold() != title.casefold():
-            return ko, 'machine'
+        korean = ''.join(part[0] for part in result[0] if part and isinstance(part[0], str)).strip()
+        if korean and korean.casefold() != title.casefold():
+            return korean, 'machine'
     except (OSError, ValueError, IndexError, TypeError, KeyError):
         pass
     return title, 'unavailable'
@@ -35,13 +43,13 @@ def classify(headline):
 def relevant(competitor, headline):
     if not PATTERNS[competitor].search(headline):
         return False
+    if FINANCE.search(headline):
+        return False
     if competitor in UNRELATED and UNRELATED[competitor].search(headline):
         return False
-    # Ambiguous names (Tapas, Manta) need explicit comics/platform context.
-    if competitor in ('tapas', 'manta'):
-        return bool(BRAND_CONTEXT[competitor].search(headline) or STRONG_CONTEXT.search(headline))
-    return bool(BRAND_CONTEXT[competitor].search(headline) or
-                (STRONG_CONTEXT.search(headline) and WEAK_CONTEXT.search(headline)))
+    if competitor in ('tapas', 'manta') and not COMICS_CONTEXT.search(headline):
+        return False
+    return True
 
 
 def fetch(competitor, query):
@@ -66,14 +74,9 @@ def fetch(competitor, query):
         category = classify(headline)
         results.append({
             'id': 'rss-' + hashlib.sha256(link.encode()).hexdigest()[:16],
-            'competitor': competitor,
-            'type': category,
-            'category': category,
-            'title': title,
-            'publishedAt': published,
-            'url': link,
-            'source': source,
-            'verificationStatus': 'unverified',
+            'competitor': competitor, 'type': category, 'category': category,
+            'title': title, 'publishedAt': published, 'url': link,
+            'source': source, 'verificationStatus': 'unverified',
         })
     return results
 
@@ -88,8 +91,7 @@ def main():
         except Exception as exc:
             errors.append(f'{competitor}: {type(exc).__name__}: {exc}')
     if not articles:
-        print('No matching items; existing dataset preserved. ' + '; '.join(errors))
-        return
+        raise SystemExit('No matching RSS items; existing data preserved. ' + '; '.join(errors))
 
     unique = {article['url']: article for article in articles}
     for article in unique.values():
