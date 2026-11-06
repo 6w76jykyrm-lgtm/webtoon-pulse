@@ -57,6 +57,7 @@ def translate(title):
     Neither endpoint has an availability guarantee; retain English on failure.
     """
     # Provider 1: unofficial Google Translate endpoint (already used by this project).
+    
     try:
         url = 'https://translate.googleapis.com/translate_a/single?' + urllib.parse.urlencode({
             'client': 'gtx', 'sl': 'en', 'tl': 'ko', 'dt': 't', 'q': title})
@@ -64,10 +65,10 @@ def translate(title):
         korean = ''.join(part[0] for part in result[0] if part and isinstance(part[0], str)).strip()
         if korean and korean.casefold() != title.casefold():
             return korean, 'machine_google'
-  except (OSError, ValueError, IndexError, TypeError, KeyError) as e:
-    print(f"Google translation failed: {type(e).__name__}: {e}")
+    except (OSError, ValueError, IndexError, TypeError, KeyError) as e:
+        print(f"Google translation failed: {type(e).__name__}: {e}")
 
-    # Provider 2: MyMemory public translation endpoint; subject to free rate limits.
+    # Provider 2: MyMemory
     try:
         url = 'https://api.mymemory.translated.net/get?' + urllib.parse.urlencode({
             'q': title[:450], 'langpair': 'en|ko'})
@@ -78,7 +79,8 @@ def translate(title):
                 and 'MYMEMORY WARNING' not in korean.upper()):
             return korean, 'machine_mymemory'
     except (OSError, ValueError, TypeError, KeyError, AttributeError) as e:
-    print(f"MyMemory translation failed: {type(e).__name__}: {e}")
+        print(f"MyMemory translation failed: {type(e).__name__}: {e}")
+
     return title, 'unavailable'
 
 
