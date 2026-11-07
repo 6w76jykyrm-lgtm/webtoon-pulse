@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-06T05:57:44.162629+00:00",
+  "updatedAt": "2026-11-07T01:18:33.073688+00:00",
   "source": "Google News RSS metadata (unverified); headline machine translation (unofficial)",
   "articles": [
     {
@@ -45,20 +45,6 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-92960fc3b45c23b0",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "The Remarried Empress is Available to Read on WEBTOON - The Outerhaven",
-      "publishedAt": "2026-11-04",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQ0RhMHBHZVZpOW9INnJpX0J2UXhwWDhwd0tqUWNIbHlCdGJnem5WM3ZnbkgySUoybzk2emY2R0d3eUU5V0d3M1pQUlJiMzktYVVDbHd5R2ppNUpBaXNLaEptUnYyaGFjekVMdUE1OVZaRzFGdS1EaTJ6Um9uckt2TksyUU0tLTRQRE4xTQ?oc=5",
-      "source": "The Outerhaven",
-      "verificationStatus": "unverified",
-      "titleKo": "재혼한 황후는 WEBTOON - The Outerhaven에서 읽을 수 있습니다.",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
       "id": "rss-8a9c5ada6542a2e0",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
@@ -73,32 +59,32 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-c0f7599f4766d8c6",
+      "id": "rss-8a3471258b02c4b0",
       "competitor": "webtoon",
       "type": "콘텐츠·IP",
       "category": "콘텐츠·IP",
-      "title": "[INTERVIEW] Korean webtoon finds new audience in India, creator eyes global reach - The Korea Times",
-      "publishedAt": "2026-10-30",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNOTBKMEg2bmNBZGRrWHNnWTcwUDFLc0dld2FSRHhDcGVJWlctYWQyOFJkbkR6MklKejB6Y3k1d1NUeEFlbzJhUUVXMHFYZGczeURjVWpCbHBKTjJMRmJ3VlpCUnlUYzRvVzlNMmNWSFFERi0yNEFnS3dMaDI0aFhkOXR5dVNNWklmM3RSamhBeUhoVDljTlhTMDJuTlA5TkRpbXR0YUlFWXJGQjlkb0NvazdUY05hU1RXUnBQUjdEUU9BcFFGRVdwVFRSSFo0QdIB0wFBVV95cUxPNTN1VUdXWlVzd25KMi1sVUc1YlR6YnFiWW1MVG1PeGp2YkpoYzk3R1ZvYmJDRmFOZGZPYkRqNllWSHdMekRBYXhHNVRQWllWSUtEZVdad2Vvd1NiX3lMZGFrQmpWQVJiU1B2cXVrdVU2NVdCYU9RcEN3Rk1yOTFnQjVQN1UxZkFKTW1BcUJxZ1FOa0tKeUxTenNXdmtuQ2U1TFdFWFNrN0RMRnNiZS1ZTkpDM1B0MDlyVUFYVG9tUUctWHVqSGhnOEd5eko4Vkd4VlJR?oc=5",
-      "source": "The Korea Times",
+      "title": "The DUNGEON CRAWLER CARL WEBTOON series is getting a physical release from Vault Comics - Comics Beat",
+      "publishedAt": "2026-10-23",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQenBzbUVyblBQRjhJaGEwRG4zV1BqZnpiN1NPNlF3cXFjX3BwcnpIazRYUE5Iam1WYTQtZ0JrdXJjSFdTX3U1dVBUdlR3YVZhWENraFdnY09FWWEtVDNFaElRRVJDTFdyQnJsVWRQOG1GLTZYOUJPZlFuX3RFN0ZXUWJ0cE9FZ05NcHhDTEY2bldmM2JaLUJZUEhoNUktYmQzaFFOTnRFWS1DYmpzS3F6enRTdkVzZw?oc=5",
+      "source": "Comics Beat",
       "verificationStatus": "unverified",
-      "titleKo": "[INTERVIEW] 한국 웹툰, 인도에서 새로운 잠재고객을 찾다, 전 세계 크리에이터의 시선 - The Korea Times",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "The DUNGEON CRAWLER CARL WEBTOON series is getting a physical release from Vault Comics - Comics Beat",
+      "translationStatus": "unavailable",
+      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-713d7c3e242c28fe",
+      "id": "rss-697f454e62509a7a",
       "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "Did WEBTOON Entertainment Inc. Insiders Breach their Fiduciary Duties to Shareholders? - Morningstar",
-      "publishedAt": "2026-10-27",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOS0VYZXdhLWVpNGpmTkppdGxBQnl3azJHSzd6OEh1MXFYNjgtVXNQdXlnMHpHYkppUGQySElaZUJYOVZzN0xmQ2ZOMEFFa3pDMDk3aHNNZTcyU1pMb21Za2xwLWFYM05iY0VtNUtobThvajBIWjlyRTQzZlVrRzJuZHpEZHExNnhfOG9xS3pLWWdTcUVfQnRSajBvYXY4b2xOZkx5Tm1KYXVtSG5NMzNmVHdIbDA5d3RReUMyZzczTmpub2Q2b2RsUTZDLUxrTlplYzUwbEFpMUdZWUdTNEE?oc=5",
-      "source": "Morningstar",
+      "type": "콘텐츠·IP",
+      "category": "콘텐츠·IP",
+      "title": "Webtoon Expands Anime Bet With Short-Form Shows Starting in 2027 - Bloomberg.com",
+      "publishedAt": "2026-10-20",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOM09PalVGTkxvR2hmMWFENU9QWnJPNWJlSnhCWmpGQjl2OFR1ZElWelJvd0xrLWwzS2xWbTlzUTRwanJ1TVo5WlBJSVVjOWR4anBtNTFSRkx5blIwTnJzNEFQZ3ZKaDRfQy1DblNDZUZJOXEyX2pJcU1qV2lmbTNjeWpvZmlabWpUWS1qTDFlRWZac3ZiRnJKSHEyandtLS00RlFsMzRYLVlyVHQ0MkkzNVp6MGhrUQ?oc=5",
+      "source": "Bloomberg.com",
       "verificationStatus": "unverified",
-      "titleKo": "WEBTOON ENTERTAINMENT INC. 내부자가 주주에 대한 수탁자의무를 위반했나요? - Morningstar",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "Webtoon Expands Anime Bet With Short-Form Shows Starting in 2027 - Bloomberg.com",
+      "translationStatus": "unavailable",
+      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-1badf65480794660",
@@ -115,32 +101,18 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-f0b372229b342d55",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "Naver Webtoon courts North America at NYCC, unveils Marvel app and animations - Chosunbiz",
-      "publishedAt": "2026-10-12",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9fRDk2ZHZ5VVJQUVIyWnhWYXZEVi1xRjVMMmdBeFdYZUJnSnhOZC14S2lXTWdBcjE0Z3pTVGoyQi1tWUE4OVlDTFAtYUd1TkliQmlxM0tQN2dZSWJxb0JNYUR6RDVJamxRb2t2bXU0dW1CQU1hT21CU3B30gGOAUFVX3lxTE9CZTVxaTdQdFd6TTlWLU00R200ZGE5WnVjbzItOWlFS3FoRFFnN2xBdXMxMXZFOHVyX29BRVhvUnR1M3dLOVI0cDBPeGtWTjEtNlhsSEtFRlRYd2VJeDNUeUg4cEs1QnFzQk5UY0hYbXJCUXRlZmh2Y1RuZFFfeUVJTXhCbHNmVWh6UE43VUE?oc=5",
-      "source": "Chosunbiz",
-      "verificationStatus": "unverified",
-      "titleKo": "네이버 웹툰, NYCC 북미 법정에서 마블 앱과 애니메이션 공개 - Chosunbiz",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-fd2e28f5eacb2f4f",
+      "id": "rss-7bd856bebfb7543c",
       "competitor": "webtoon",
       "type": "콘텐츠·IP",
       "category": "콘텐츠·IP",
-      "title": "Webtoon Entertainment joins New York Comic Con, unveils 'Fogland' and Marvel app - 디지털투데이",
-      "publishedAt": "2026-10-12",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNdVBKNnEzUWNCNC1xS2RrZTkzTHVmOGVIYTlkT1hiN0k4cE02dHVWX29jZDhaOGc3Nm0wbXdDZjM1ZktOc2VJMUFCQWEzd3F2ejRsOFZJU2hIbG5DYnkzVnQ3REdCbk1jSjJheUphNVNpbmtRWlQzSmFUTW9xM3RmMXJ6WGRMREYxQ1NmcVVhcnV2Q3JZZWp6aFNoYk5VemFvcnhKbEFRdlc5Q2twOTZsSWFFNDJqWGcxSlI0TnNoX1A?oc=5",
-      "source": "디지털투데이",
+      "title": "WEBTOON Officially Unleashes a Terrifying New Villain Upon Gotham City in New DC Horror Comic - Collider",
+      "publishedAt": "2026-10-19",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE01d0dPdU5vZ3dFY2NXY1dpVjd5RlZnR21CUUZVdnRTQVVidmh5Wm02Q3pFdE9JZm1RWXRuUS11MzVqc0VVU0lZZTc4NTNMRHJ6Rmp3dVFtUE1oN0RfZ1BWcDF2MXptRWRCZlBCSlpmaTJLMG1QVHlqeGJ1Skw?oc=5",
+      "source": "Collider",
       "verificationStatus": "unverified",
-      "titleKo": "웹툰 엔터테인먼트, 뉴욕 코믹콘 합류, '포그랜드' 와 마블 앱 공개 - 디지털투데이",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "WEBTOON Officially Unleashes a Terrifying New Villain Upon Gotham City in New DC Horror Comic - Collider",
+      "translationStatus": "unavailable",
+      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-3cd0ab4c2aabeeff",
@@ -155,6 +127,20 @@
       "titleKo": "Marvel과 WEBTOON, Marvel Unlimited가 끝나면서 새로운 만화 앱 출시 - GeekTyrant",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-3afccbd6905ab7d5",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "NYCC 2026: Inside WEBTOON Entertainment: What’s Coming Next - The Outerhaven",
+      "publishedAt": "2026-10-10",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxObUNzak1iLXoxeU5iTXRWOVVETm5sN01EbkgzSmRhODRqclljYUpRb1JGTEp1T3ZrcEFGd3IybXhTYXpYSjh0UWtWYkxSeXVqMV93OHF3TGFiX285X2FJM05BRDAtQVBOWTNhOFlKN0JHRGZiSkZFWjVZS296REdoaWtRdUFZdGM3VW1rU0ZWQXQ?oc=5",
+      "source": "The Outerhaven",
+      "verificationStatus": "unverified",
+      "titleKo": "NYCC 2026: Inside WEBTOON Entertainment: What’s Coming Next - The Outerhaven",
+      "translationStatus": "unavailable",
+      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-126b12e449bf6ae7",
@@ -185,6 +171,20 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
+      "id": "rss-963bc400dc851104",
+      "competitor": "webtoon",
+      "type": "콘텐츠·IP",
+      "category": "콘텐츠·IP",
+      "title": "NYCC: Dreambound On Webtoon Revealed As A Secret DC Vertigo Comic - Bleeding Cool News",
+      "publishedAt": "2026-10-09",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQcHI3bWlLTGN4ZDhHcnZpYzdRNFFDN0Y1VWY3Z29BQnNTVHZ6X0l0OWk2RzZEQk1UeC1STkdxazdxeVM2bnNPR3l6dmY0UGxYX1VzZ3Z0QlNfWmIwTkVoVlAzTlJkVFltNzVWY3ZLcTJkY3QwQnBJa2dtNGd5RWtwYk9rYTd6X0wwanhDZC04dHc0STlCUXRMQjlaa3RCUQ?oc=5",
+      "source": "Bleeding Cool News",
+      "verificationStatus": "unverified",
+      "titleKo": "NYCC: Dreambound On Webtoon Revealed As A Secret DC Vertigo Comic - Bleeding Cool News",
+      "translationStatus": "unavailable",
+      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
       "id": "rss-68bbd200ec0193b8",
       "competitor": "webtoon",
       "type": "비즈니스·전략",
@@ -199,46 +199,32 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-46e5dbe5395a7fb3",
-      "competitor": "tapas",
+      "id": "rss-11df7ba0eee96cdc",
+      "competitor": "webtoon",
       "type": "기타 업계 뉴스",
       "category": "기타 업계 뉴스",
-      "title": "[Exclusive] Kakao Entertainment to liquidate translation subsidiary following Tapas, affecting approximately 30 employees - 머니투데이",
+      "title": "NYCC: Crunchyroll Spotlights 'Sekiro,' 'Ghost of Tsushima,' New WEBTOON Adaptations & More - Animation Magazine",
       "publishedAt": "2026-10-08",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBYcW82cWFaR2Q0NjMyb3RfcGZRcjVEUTRIVFMwT0xma2pqa1Zpd0ctMXFwYXdSdlBpX0VOeVhTUHdRWXc0UExROWJRZTh4aUhLU3o4YjNHMk5FTVVvZGNDV21GcHhRSUowa3Rn?oc=5",
-      "source": "머니투데이",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUl9ybDdwOWJXNnVKTkJMcnIwSDYxSWE4N0Q5ZDdTTlAxeFJvVWl2RmJIaks0dFEtNHBuNVNwZzhDOUFzejVKeXo5NTN2cVhNQmFZbFdvWGNfQmFyVGp4TlVYYzFTcnBfeVRDMUoyemZ2RjZNdl9tSzZCZmIxUHJMcmJVMlIwS3o3em5ocXNXaG9udTI5X210T2JXQ29DNmNmSU9XeVFGUXZNMUc1UjVhVVN1aEJaM3p1N0pYV0hoVWstUQ?oc=5",
+      "source": "Animation Magazine",
       "verificationStatus": "unverified",
-      "titleKo": "[독점] 카카오엔터테인먼트, 타파스에 이어 번역 자회사 청산, 직원 약 30명 영향 - 머니투데이",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "NYCC: Crunchyroll Spotlights 'Sekiro,' 'Ghost of Tsushima,' New WEBTOON Adaptations & More - Animation Magazine",
+      "translationStatus": "unavailable",
+      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-050b8937bf6d2176",
-      "competitor": "webtoon",
-      "type": "콘텐츠·IP",
-      "category": "콘텐츠·IP",
-      "title": "WEBTOON Entertainment Brings Major Content Announcements, First Looks, and Creator Panels to San Diego Comic-Con 2026 - Webtoon",
-      "publishedAt": "2026-10-07",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE95WWpJZlhmY0NzN29XZWFjTFFxY1Q0bldXTjZUZ3NwSmNxNzBWdjVuQUItQ19WWE9COFp4bzhuYlZKNUh0SllRTUwwOHJvWTg5dkk1bUVR?oc=5",
-      "source": "Webtoon",
-      "verificationStatus": "unverified",
-      "titleKo": "웹툰 엔터테인먼트, 샌디에이고 코믹콘 2026에 주요 콘텐츠 발표, 퍼스트 룩, 크리에이터 패널 제공 - 웹툰",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-83903b99ca4da3de",
+      "id": "rss-98981b9786c47faa",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
       "category": "기타 업계 뉴스",
-      "title": "Marvel Unlimited is shutting down after 19 years, will be replaced by Webtoon comics app - The Derrick",
-      "publishedAt": "2026-10-07",
-      "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxPRVNYUmYyNWJqVWZnYkVKUVpCbWVSM3JneFUzaWlBSXJUWjRvWkRLbVJRam1hRnRUTHdyckZjbTdaeXZIYVRwT1A4bmhNSDREZmxEQWxwazF5dm5YT2pKQVJXRzU5TlJBd21Ob3I3R2hYbmZ3WDB6cTdZWTQ4ZENIN3RDNHUtNmRyRWJfaWdIQU5aZkdGV2ZaVUhvaXdRUzhldzNKTFFUbXI1OWt2QkdzNWZfdjdsVmpoZFdrYUFVSEZ6dVhJeDdPakR2VTRwRmw3akZESFU4TFhQU2JxdDJWRVl3ZlNUV0ZodExHRWJrWHdRcXhJM3BjaUEzQ0F2cmsyNHNzUlBpZHN1WHdRYkRReA?oc=5",
-      "source": "The Derrick",
+      "title": "Marvel Unlimited is shutting down after 19 years, will be replaced by Webtoon comics app - Texarkana Gazette",
+      "publishedAt": "2026-10-08",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQU5zRF94WGpXY09pN2YxN1NHM3FTTXhwRlVCRndrRlYwaHVUMUx5YlNKajJ2RXFNbHlPYmpPTjk1VDMtVXRnR1RLTWVhOHo5Mlg1b3lFME9CWVZOS004ZUpNV3gzS3VCOFphTGs3S1A2LUZIb3BtRmFBNG1SbDVZYTQ2WVpSTE1VeUxqcjBydVU3U3NKQnVfeUROV1Y3dHF5?oc=5",
+      "source": "Texarkana Gazette",
       "verificationStatus": "unverified",
-      "titleKo": "마블 언리미티드 (Marvel Unlimited) 는 19년 후 종료되며, 웹툰 만화 앱 - 더 데릭 (The Derrick) 으로 대체됩니다.",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "Marvel Unlimited is shutting down after 19 years, will be replaced by Webtoon comics app - Texarkana Gazette",
+      "translationStatus": "unavailable",
+      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
     }
   ]
 }
