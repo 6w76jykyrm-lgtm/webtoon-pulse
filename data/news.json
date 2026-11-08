@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-11-07T01:18:33.073688+00:00",
+  "updatedAt": "2026-11-08T01:24:11.566796+00:00",
   "source": "Google News RSS metadata (unverified); headline machine translation (unofficial)",
   "articles": [
+    {
+      "id": "rss-a07f46e1bc3b9b4d",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "Did Lower Earnings Forecasts Just Shift WEBTOON Entertainment's (WBTN) Investment Narrative? - Yahoo Finance",
+      "publishedAt": "2026-11-07",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPeEpPU2NNS21HYVo2WEVGcU9WcWVtaWk3aHUyS091ZURGS3RabWYzaW1KSmlzNHJ4NldZaXI3Q084aU51R3ltUDFvX0xHR3FKZ1duRFNNbXFUWEYxQVpvaFdVSGxEZlZLeXlVYmlFb3dBN2YwZ2JqenpCNVFlZ1I3Tk1Gd0xLQnRqWk9COGdGV0RqSkZuUHk1S3pTTEprbmM?oc=5",
+      "source": "Yahoo Finance",
+      "verificationStatus": "unverified",
+      "titleKo": "낮은 수익 예측은 WEBTOON Entertainment (WBTN) 의 투자 내러티브를 변화시켰습니까? - Yahoo Finance",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
     {
       "id": "rss-1f8296dda09799c4",
       "competitor": "webtoon",
@@ -45,6 +59,20 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
+      "id": "rss-75ee2103c03d0bd4",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "'Omniscient Reader,' 9 other works win main prizes at World Webtoon Awards - The Korea Times",
+      "publishedAt": "2026-11-03",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOczRqRDVsY3d5RUs4VXN3ejZEU1czR0NEbW9TTUx0NW1fSGZYSXh0Q01tS2xWRlBSakpWQkpMejdOZXp0Q3Y1S0FuVGJHMnJTUU9FZEJFRE5KRkNoc0V3R1ExQldoc2dlU0NaS2lsRzc0VlRXWGhmQUNBbTBxRHRmcTdycFZhUl8xTmlnOFN2MDJtaUp6cFdoTXp5RnRhVWFBT3FxSXhialhoSGt6UEZZQU1qNV91SHZkbHlKXzlaeDU4MFJxcTBEa1JR0gHPAUFVX3lxTFBBVGItbnB2RWtycE11eFY1Z2IwLU5ZaldvamRYZ3dXc29zWk1nSmhONm12RGk2WTVWVjlDSzFhSEZyUTZEbWxISzdvQUVPQ3JIQlFOOFZJeURZdVp3alpuZWdkMnExT1FjYnBjM3BmQ0dZVWUzaUpjaUxJZ3FQSThMbGRzY2tVMmRkOUl2RXJMYTNxc2twY2FOZlJ4U1cxcm1obGZKd3hhOEd2Vlp5WTZyT1dGRGdlQXlIZlB5M0lkVnNULWxsX1JwZlRaby1KZw?oc=5",
+      "source": "The Korea Times",
+      "verificationStatus": "unverified",
+      "titleKo": "'전지전능한 독자' 외 9편, 월드웹툰어워드 본상 수상 - The Korea Times",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
       "id": "rss-8a9c5ada6542a2e0",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
@@ -68,9 +96,9 @@
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQenBzbUVyblBQRjhJaGEwRG4zV1BqZnpiN1NPNlF3cXFjX3BwcnpIazRYUE5Iam1WYTQtZ0JrdXJjSFdTX3U1dVBUdlR3YVZhWENraFdnY09FWWEtVDNFaElRRVJDTFdyQnJsVWRQOG1GLTZYOUJPZlFuX3RFN0ZXUWJ0cE9FZ05NcHhDTEY2bldmM2JaLUJZUEhoNUktYmQzaFFOTnRFWS1DYmpzS3F6enRTdkVzZw?oc=5",
       "source": "Comics Beat",
       "verificationStatus": "unverified",
-      "titleKo": "The DUNGEON CRAWLER CARL WEBTOON series is getting a physical release from Vault Comics - Comics Beat",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "던전 크롤러 칼 웹툰 (CARL WEBTOON) 시리즈가 볼트 코믹스 (Vault Comics) - 코믹스 비트 (Comics Beat) 에서 실제 출시됩니다.",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-697f454e62509a7a",
@@ -82,9 +110,9 @@
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOM09PalVGTkxvR2hmMWFENU9QWnJPNWJlSnhCWmpGQjl2OFR1ZElWelJvd0xrLWwzS2xWbTlzUTRwanJ1TVo5WlBJSVVjOWR4anBtNTFSRkx5blIwTnJzNEFQZ3ZKaDRfQy1DblNDZUZJOXEyX2pJcU1qV2lmbTNjeWpvZmlabWpUWS1qTDFlRWZac3ZiRnJKSHEyandtLS00RlFsMzRYLVlyVHQ0MkkzNVp6MGhrUQ?oc=5",
       "source": "Bloomberg.com",
       "verificationStatus": "unverified",
-      "titleKo": "Webtoon Expands Anime Bet With Short-Form Shows Starting in 2027 - Bloomberg.com",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "웹툰, 2027년부터 짧은 형식의 쇼로 애니메이션 베팅 확장 - Bloomberg.com",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-1badf65480794660",
@@ -110,9 +138,9 @@
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE01d0dPdU5vZ3dFY2NXY1dpVjd5RlZnR21CUUZVdnRTQVVidmh5Wm02Q3pFdE9JZm1RWXRuUS11MzVqc0VVU0lZZTc4NTNMRHJ6Rmp3dVFtUE1oN0RfZ1BWcDF2MXptRWRCZlBCSlpmaTJLMG1QVHlqeGJ1Skw?oc=5",
       "source": "Collider",
       "verificationStatus": "unverified",
-      "titleKo": "WEBTOON Officially Unleashes a Terrifying New Villain Upon Gotham City in New DC Horror Comic - Collider",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "WEBTOON은 공식적으로 새로운 DC 호러 코믹 - 콜라이더에서 고담 시티에 무시무시한 새로운 악당을 발사합니다",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-3cd0ab4c2aabeeff",
@@ -129,20 +157,6 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-3afccbd6905ab7d5",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "NYCC 2026: Inside WEBTOON Entertainment: What’s Coming Next - The Outerhaven",
-      "publishedAt": "2026-10-10",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxObUNzak1iLXoxeU5iTXRWOVVETm5sN01EbkgzSmRhODRqclljYUpRb1JGTEp1T3ZrcEFGd3IybXhTYXpYSjh0UWtWYkxSeXVqMV93OHF3TGFiX285X2FJM05BRDAtQVBOWTNhOFlKN0JHRGZiSkZFWjVZS296REdoaWtRdUFZdGM3VW1rU0ZWQXQ?oc=5",
-      "source": "The Outerhaven",
-      "verificationStatus": "unverified",
-      "titleKo": "NYCC 2026: Inside WEBTOON Entertainment: What’s Coming Next - The Outerhaven",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
       "id": "rss-126b12e449bf6ae7",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
@@ -153,6 +167,34 @@
       "source": "Bleeding Cool News",
       "verificationStatus": "unverified",
       "titleKo": "NYCC: DC 코믹스 및 웹툰의 Mike Birchall의 Gotham By Daylight - Bleeding Cool News",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-3afccbd6905ab7d5",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "NYCC 2026: Inside WEBTOON Entertainment: What’s Coming Next - The Outerhaven",
+      "publishedAt": "2026-10-10",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxObUNzak1iLXoxeU5iTXRWOVVETm5sN01EbkgzSmRhODRqclljYUpRb1JGTEp1T3ZrcEFGd3IybXhTYXpYSjh0UWtWYkxSeXVqMV93OHF3TGFiX285X2FJM05BRDAtQVBOWTNhOFlKN0JHRGZiSkZFWjVZS296REdoaWtRdUFZdGM3VW1rU0ZWQXQ?oc=5",
+      "source": "The Outerhaven",
+      "verificationStatus": "unverified",
+      "titleKo": "NYCC 2026: Inside WEBTOON ENTERTAINMENT: What's Coming Next - 아우터헤이븐",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-630dd76f6188fc45",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "Slideshow: Marvel Comics Powered by Webtoon – Hands-On Photos - IGN Pakistan",
+      "publishedAt": "2026-10-10",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPTDczbjVYdU9YdzlxV1lDWDRick8xNXUxQnBaTG5McFhhS0VBRGdyUC10RTNNX1pCUWpfNEZ3UE5FWV9URFZWSUNzZkVkN3llQmVPY1pwaU5vRWQxNm9pNE0wMXRQc3dzdnNBMzVNazVockY4UzA1XzNHdHo0NThtQXViQUNfcmh5SDNfQXduREJjODU3RDdv?oc=5",
+      "source": "IGN Pakistan",
+      "verificationStatus": "unverified",
+      "titleKo": "슬라이드쇼: 웹툰 제공 마블 코믹스 – 실전 사진 - IGN 파키스탄",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
@@ -180,51 +222,9 @@
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQcHI3bWlLTGN4ZDhHcnZpYzdRNFFDN0Y1VWY3Z29BQnNTVHZ6X0l0OWk2RzZEQk1UeC1STkdxazdxeVM2bnNPR3l6dmY0UGxYX1VzZ3Z0QlNfWmIwTkVoVlAzTlJkVFltNzVWY3ZLcTJkY3QwQnBJa2dtNGd5RWtwYk9rYTd6X0wwanhDZC04dHc0STlCUXRMQjlaa3RCUQ?oc=5",
       "source": "Bleeding Cool News",
       "verificationStatus": "unverified",
-      "titleKo": "NYCC: Dreambound On Webtoon Revealed As A Secret DC Vertigo Comic - Bleeding Cool News",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-68bbd200ec0193b8",
-      "competitor": "webtoon",
-      "type": "비즈니스·전략",
-      "category": "비즈니스·전략",
-      "title": "WEBTOON Expands Global IP Business with Strategic Investment in RI Games Holdings Inc. - Webtoon",
-      "publishedAt": "2026-10-08",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE45WnV2ME1sZGVrSVhMTHpQU2t3Mm9vWk1MLWhORFZDMFA1QktURDhwLUZqQmlRUlhaMzB0ME95ZlN1ZDEtZFB2SmdfX0RhMjFEX1pjQmFB?oc=5",
-      "source": "Webtoon",
-      "verificationStatus": "unverified",
-      "titleKo": "웹툰, RI Games Holdings Inc. 에 전략적 투자로 글로벌 IP 사업 확장 - 웹툰",
+      "titleKo": "NYCC: 비밀 DC 버티고 코믹으로 공개된 웹툰의 드림바운드 - 멋진 뉴스 출혈",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-11df7ba0eee96cdc",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "NYCC: Crunchyroll Spotlights 'Sekiro,' 'Ghost of Tsushima,' New WEBTOON Adaptations & More - Animation Magazine",
-      "publishedAt": "2026-10-08",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUl9ybDdwOWJXNnVKTkJMcnIwSDYxSWE4N0Q5ZDdTTlAxeFJvVWl2RmJIaks0dFEtNHBuNVNwZzhDOUFzejVKeXo5NTN2cVhNQmFZbFdvWGNfQmFyVGp4TlVYYzFTcnBfeVRDMUoyemZ2RjZNdl9tSzZCZmIxUHJMcmJVMlIwS3o3em5ocXNXaG9udTI5X210T2JXQ29DNmNmSU9XeVFGUXZNMUc1UjVhVVN1aEJaM3p1N0pYV0hoVWstUQ?oc=5",
-      "source": "Animation Magazine",
-      "verificationStatus": "unverified",
-      "titleKo": "NYCC: Crunchyroll Spotlights 'Sekiro,' 'Ghost of Tsushima,' New WEBTOON Adaptations & More - Animation Magazine",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-98981b9786c47faa",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "Marvel Unlimited is shutting down after 19 years, will be replaced by Webtoon comics app - Texarkana Gazette",
-      "publishedAt": "2026-10-08",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQU5zRF94WGpXY09pN2YxN1NHM3FTTXhwRlVCRndrRlYwaHVUMUx5YlNKajJ2RXFNbHlPYmpPTjk1VDMtVXRnR1RLTWVhOHo5Mlg1b3lFME9CWVZOS004ZUpNV3gzS3VCOFphTGs3S1A2LUZIb3BtRmFBNG1SbDVZYTQ2WVpSTE1VeUxqcjBydVU3U3NKQnVfeUROV1Y3dHF5?oc=5",
-      "source": "Texarkana Gazette",
-      "verificationStatus": "unverified",
-      "titleKo": "Marvel Unlimited is shutting down after 19 years, will be replaced by Webtoon comics app - Texarkana Gazette",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
     }
   ]
 }
