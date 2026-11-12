@@ -43,6 +43,46 @@ jobs:
                   print(model['name'])
           PY
 
+      - name: Test Gemini connection
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.error
+          import urllib.request
+
+          url = (
+              'https://generativelanguage.googleapis.com/v1beta/'
+              'models/gemini-3.8-flash:generateContent'
+          )
+          body = {
+              'contents': [
+                  {'parts': [{'text': '한국어로 안녕하세요 한 문장만 써줘.'}]}
+              ]
+          }
+          request = urllib.request.Request(
+              url,
+              data=json.dumps(body).encode('utf-8'),
+              headers={
+                  'Content-Type': 'application/json',
+                  'x-goog-api-key': os.environ['GEMINI_API_KEY']
+              },
+              method='POST'
+          )
+          try:
+              with urllib.request.urlopen(request, timeout=30) as response:
+                  data = json.load(response)
+              print('TEST SUCCESS')
+              print(json.dumps(data, ensure_ascii=False)[:800])
+          except urllib.error.HTTPError as exc:
+              print('TEST HTTP ERROR:', exc.code)
+              print(exc.read().decode('utf-8', errors='replace')[:800])
+          except Exception as exc:
+              print('TEST CONNECTION ERROR:', type(exc).__name__)
+          PY
+
       - name: Generate AI briefing
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
