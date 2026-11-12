@@ -4,13 +4,39 @@ import datetime as dt
 import json
 import os
 from pathlib import Path
+import random
+import socket
+import time
 import urllib.error
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'data' / 'news.json'
 OUTPUT = ROOT / 'data' / 'briefing.json'
-MODEL = os.getenv('GEMINI_MODEL', 'gemini-2.5-flash-lite')
+MODEL = os.getenv('GEMINI_MODEL', 'gemini-3.8-flash-lite')
+MAX_ATTEMPTS = 3
+RETRYABLE_HTTP = {429, 500, 502, 503, 504}
+
+
+def generate(request):
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            print(f'Gemini request attempt {attempt}/{MAX_ATTEMPTS} (model: {MODEL})', flush=True)
+            with urllib.request.urlopen(request, timeout=90) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode('utf-8', errors='replace')
+            if exc.code not in RETRYABLE_HTTP or attempt == MAX_ATTEMPTS:
+                raise RuntimeError(f'Gemini API HTTP {exc.code}: {detail[:1500]}') from None
+            print(f'Temporary Gemini HTTP {exc.code}; will retry.', flush=True)
+        except (TimeoutError, socket.timeout, urllib.error.URLError) as exc:
+            if attempt == MAX_ATTEMPTS:
+                raise RuntimeError(f'Gemini connection failed after {MAX_ATTEMPTS} attempts: {type(exc).__name__}: {exc}') from None
+            print(f'Temporary Gemini connection issue ({type(exc).__name__}); will retry.', flush=True)
+        delay = (5 if attempt == 1 else 15) + random.uniform(0, 2)
+        print(f'Waiting {delay:.1f}s before retry...', flush=True)
+        time.sleep(delay)
+    raise RuntimeError('Gemini request failed')
 
 
 def main():
@@ -44,15 +70,9 @@ def main():
     request = urllib.request.Request(
         url, data=json.dumps(body).encode('utf-8'),
         headers={'Content-Type': 'application/json', 'x-goog-api-key': key}, method='POST')
-    try:
-        with urllib.request.urlopen(request, timeout=75) as response:
-            result = json.load(response)
-    except urllib.error.HTTPError as exc:
-        detail = exc.read().decode('utf-8', errors='replace')
-        raise RuntimeError(
-            f'Gemini API HTTP {exc.code}: {detail[:1500]}'
-        ) from None
-    parts = result.get('candidates', [{}])[0].get('content', {}).get('parts', [])
+    result = generate(request)
+    candidates = result.get('candidates') or []
+    parts = candidates[0].get('content', {}).get('parts', []) if candidates else []
     raw = ''.join(part.get('text', '') for part in parts)
     if not raw:
         raise RuntimeError('Gemini returned no text; briefing was not overwritten')
