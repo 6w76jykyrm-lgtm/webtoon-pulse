@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-11-11T01:22:43.298492+00:00",
+  "updatedAt": "2026-11-12T01:29:37.743711+00:00",
   "source": "Google News RSS metadata (unverified); headline machine translation (unofficial)",
   "articles": [
+    {
+      "id": "rss-ca3f93e93e86e77d",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "WEBTOON Entertainment Q3 Earnings Call Highlights - TradingView",
+      "publishedAt": "2026-11-10",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNWDJhNWVWSnU5c016TlZ1VW5JMG41d3VBUEpuQUxRU2NENFl2cDJMeE1wc1B5X2lxRDNGdUNPMHIxaUdzNTlSZ0VfTTU4M2dqU1BLckNiN0x5ajk4OWZDc0pYaDU0QW13UkF3cXROQXRJT0ttdGxqblRtNHE1T2tCWUN2V3oxblBZYlBQSXBBXzJfNndrLVhVeGVBeUpTUzBBNHBKMENzTTl5R0prYVE?oc=5",
+      "source": "TradingView",
+      "verificationStatus": "unverified",
+      "titleKo": "웹툰 엔터테인먼트 3분기 실적발표 하이라이트 - TradingView",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
     {
       "id": "rss-83a3321c8d1c6077",
       "competitor": "webtoon",
@@ -55,20 +69,6 @@
       "source": "Yahoo Finance Singapore",
       "verificationStatus": "unverified",
       "titleKo": "Webtoon Entertainment Inc (WBTN) (2026년 3분기) 수익 통화 하이라이트: 광고가 26% 급증... - Yahoo Finance Singapore",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-3e405cd45ab6f64c",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "WEBTOON Entertainment Q3 Earnings Call Highlights - TradingView",
-      "publishedAt": "2026-11-10",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZ05WQS1YVmtoWTFHb1U2ZDdIOWw5ZzdOOXJkd2M3UkMyekhBekFOOTRMdVAxMUFzWTBIaXFuUGJ0RG8wTTh5RnIwd1BOVGlTcm82bEZpN2VsWXhvMlJ1OHQwV2FvSXcxbFR4VzFhcWVMWEUtN0VCci1UaTl1aFVCVE5qZlZ4bnZtdjFsVUVLYjJLWjVhLWZUU3pwVURQbTF5dFA1d1hPZlY0Z0syZU40?oc=5",
-      "source": "TradingView",
-      "verificationStatus": "unverified",
-      "titleKo": "웹툰 엔터테인먼트 3분기 실적발표 하이라이트 - TradingView",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
