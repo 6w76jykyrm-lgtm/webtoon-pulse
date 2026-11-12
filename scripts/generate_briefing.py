@@ -48,8 +48,10 @@ def main():
         with urllib.request.urlopen(request, timeout=75) as response:
             result = json.load(response)
     except urllib.error.HTTPError as exc:
-        # Do not print request headers or credentials.
-        raise RuntimeError(f'Gemini API HTTP {exc.code}; check model access, quota and API key') from exc
+        detail = exc.read().decode('utf-8', errors='replace')
+        raise RuntimeError(
+            f'Gemini API HTTP {exc.code}: {detail[:1500]}'
+        ) from None
     parts = result.get('candidates', [{}])[0].get('content', {}).get('parts', [])
     raw = ''.join(part.get('text', '') for part in parts)
     if not raw:
