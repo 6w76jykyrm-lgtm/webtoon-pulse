@@ -21,6 +21,28 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Check available Gemini models
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import urllib.request
+
+          request = urllib.request.Request(
+              'https://generativelanguage.googleapis.com/v1beta/models',
+              headers={'x-goog-api-key': os.environ['GEMINI_API_KEY']}
+          )
+
+          with urllib.request.urlopen(request, timeout=20) as response:
+              data = json.load(response)
+
+          for model in data.get('models', []):
+              if 'generateContent' in model.get('supportedGenerationMethods', []):
+                  print(model['name'])
+          PY
+
       - name: Generate AI briefing
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
