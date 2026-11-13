@@ -1,7 +1,35 @@
 {
-  "updatedAt": "2026-11-12T01:29:37.743711+00:00",
+  "updatedAt": "2026-11-13T01:25:51.740140+00:00",
   "source": "Google News RSS metadata (unverified); headline machine translation (unofficial)",
   "articles": [
+    {
+      "id": "rss-d3c899ea6795676f",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "WEBTOON Entertainment (WBTN) Posts Fresh Guidance, Is It Still 11% Undervalued? - Yahoo Finance",
+      "publishedAt": "2026-11-12",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQdVdaTzhEVnUycjZpYjNDZkx4STRra2hnWDZOQ0E4amZueVFTdzl4RjRxOVFKUC05TTNuSlpMNXNrZTFZc1huNm9XaU53ajZGd0VzMnZYcURMV3NxSl9KZ3V0bXZVcEhkOHExZHJVS3lMa1hPQjhIZlgydzh1Wm15SjF3dU90OU1NeF9FYmdiNG1vWEROZUNaMjhNdzdDOTFwMERPNXBn?oc=5",
+      "source": "Yahoo Finance",
+      "verificationStatus": "unverified",
+      "titleKo": "웹툰엔터테인먼트(WBTN), 신선한 가이던스 내놨다, 아직도 11% 저평가? - 야후 파이낸스",
+      "translationStatus": "machine_google",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-55701c176a649f2e",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "WEBTOON Entertainment Beats Q3 Earnings Estimates, Issues Revenue Guidance Above Forecasts - Yahoo Finance",
+      "publishedAt": "2026-11-10",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcWgxSGFmNEJ3ZE5JR1JOVFVrTExZWFNHeF9XSFN6ZHVuYU4tc2lncFpvR29HNUM0V0lqY3pLMUFWZ0VMMHlmZTY0WE1PcXNZOERScGtscjRnX2JhOWNpYmxfSTZhWDNTbGc5ZWpodHd1bHZZRV9ScF9KLXU5Ymd3eGJZN0VXOWRLTUFpMExvdWFkN0lNemQ1NWwzQ1lXcEdKZ3d5VjQwSQ?oc=5",
+      "source": "Yahoo Finance",
+      "verificationStatus": "unverified",
+      "titleKo": "웹툰엔터테인먼트, 3분기 실적 추정치 경신, 매출 전망치 상회 - 야후 파이낸스",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
     {
       "id": "rss-ca3f93e93e86e77d",
       "competitor": "webtoon",
@@ -31,20 +59,6 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-55701c176a649f2e",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "WEBTOON Entertainment Beats Q3 Earnings Estimates, Issues Revenue Guidance Above Forecasts - Yahoo Finance",
-      "publishedAt": "2026-11-10",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcWgxSGFmNEJ3ZE5JR1JOVFVrTExZWFNHeF9XSFN6ZHVuYU4tc2lncFpvR29HNUM0V0lqY3pLMUFWZ0VMMHlmZTY0WE1PcXNZOERScGtscjRnX2JhOWNpYmxfSTZhWDNTbGc5ZWpodHd1bHZZRV9ScF9KLXU5Ymd3eGJZN0VXOWRLTUFpMExvdWFkN0lNemQ1NWwzQ1lXcEdKZ3d5VjQwSQ?oc=5",
-      "source": "Yahoo Finance",
-      "verificationStatus": "unverified",
-      "titleKo": "웹툰엔터테인먼트, 3분기 실적 추정치 경신, 매출 전망치 상회 - 야후 파이낸스",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
       "id": "rss-eb077abe2df48b6e",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
@@ -55,20 +69,6 @@
       "source": "Yahoo Finance",
       "verificationStatus": "unverified",
       "titleKo": "웹툰: 장기 투자자를 위한 3가지 핵심 사항 - 야후 파이낸스",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-b549ac6b8f87214e",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "Webtoon Entertainment Inc (WBTN) (Q3 2026) Earnings Call Highlights: Advertising Surges 26% as ... - Yahoo Finance Singapore",
-      "publishedAt": "2026-11-10",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPR19acmhxbGUtVk1ReEh5M2ZWUGhHRjN0TDVDRG42bHdmbmxVWFdNN1FtSThtN09TdVRuUzE4alFUSmtGckZtTl9HVGU1Q182dzZmRlNIci1qWkhsNEVLS3dpZm00Z3RvdVJYTVRSaTRsQWxiYk9DN0YwYWgzTEQzRUI5ZGluWkJFd2c?oc=5",
-      "source": "Yahoo Finance Singapore",
-      "verificationStatus": "unverified",
-      "titleKo": "Webtoon Entertainment Inc (WBTN) (2026년 3분기) 수익 통화 하이라이트: 광고가 26% 급증... - Yahoo Finance Singapore",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
@@ -157,13 +157,13 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-e436ea9bc29e00bd",
+      "id": "rss-21b364e8927e001d",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
       "category": "기타 업계 뉴스",
       "title": "With Disney+ and Hulu’s Korean Romantic Epic ‘The Remarried Empress,’ Webtoon Entertainment Enters a New Phase in Hollywood - IMDb",
       "publishedAt": "2026-11-05",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE85VW1HbFRlTUxyT2RUMUdpdm9IeTZfVTR2eFRkdmpta3p2NjlUNVhJOHFIMVVsenEwcEpfWWx2OENtbzEzZkdRTzBsdFJXb0dHUGlEUWFmbnlwc3BzQ3FFNVV1Yzc5eVE?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE10cUlFLS1sR0s4RUhaTFlnNEEteVUyUkxveHFmZkxXTHVoRlBKQWotaTlyT01mLXB4XzN2aXQtOVpwMDV3X1ZCRXJrQVVqWm5iZEdWNC11TGlGNFdaVlhzWUNLNDVGZw?oc=5",
       "source": "IMDb",
       "verificationStatus": "unverified",
       "titleKo": "디즈니 + 와 훌루의 한국 로맨틱 서사시 ‘재혼한 황후’ 를 통해 웹툰 엔터테인먼트가 할리우드에서 새로운 국면을 맞이하다 - IMDb",
