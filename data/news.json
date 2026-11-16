@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T01:25:40.574120+00:00",
+  "updatedAt": "2026-11-16T01:41:44.861597+00:00",
   "source": "Google News RSS metadata (unverified); headline machine translation (unofficial)",
   "articles": [
     {
@@ -27,20 +27,6 @@
       "source": "Bleeding Cool News",
       "verificationStatus": "unverified",
       "titleKo": "영국 마블 웹툰 고객에게 과다 청구, 부가가치세 환급 처리 - Bleeding Cool News",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-55701c176a649f2e",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "WEBTOON Entertainment Beats Q3 Earnings Estimates, Issues Revenue Guidance Above Forecasts - Yahoo Finance",
-      "publishedAt": "2026-11-10",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcWgxSGFmNEJ3ZE5JR1JOVFVrTExZWFNHeF9XSFN6ZHVuYU4tc2lncFpvR29HNUM0V0lqY3pLMUFWZ0VMMHlmZTY0WE1PcXNZOERScGtscjRnX2JhOWNpYmxfSTZhWDNTbGc5ZWpodHd1bHZZRV9ScF9KLXU5Ymd3eGJZN0VXOWRLTUFpMExvdWFkN0lNemQ1NWwzQ1lXcEdKZ3d5VjQwSQ?oc=5",
-      "source": "Yahoo Finance",
-      "verificationStatus": "unverified",
-      "titleKo": "WEBTOON Entertainment, 3분기 실적 전망치 상회, 예상치를 웃도는 매출 가이던스 제시 - Yahoo Finance",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
@@ -73,6 +59,20 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
+      "id": "rss-55701c176a649f2e",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "WEBTOON Entertainment Beats Q3 Earnings Estimates, Issues Revenue Guidance Above Forecasts - Yahoo Finance",
+      "publishedAt": "2026-11-10",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcWgxSGFmNEJ3ZE5JR1JOVFVrTExZWFNHeF9XSFN6ZHVuYU4tc2lncFpvR29HNUM0V0lqY3pLMUFWZ0VMMHlmZTY0WE1PcXNZOERScGtscjRnX2JhOWNpYmxfSTZhWDNTbGc5ZWpodHd1bHZZRV9ScF9KLXU5Ymd3eGJZN0VXOWRLTUFpMExvdWFkN0lNemQ1NWwzQ1lXcEdKZ3d5VjQwSQ?oc=5",
+      "source": "Yahoo Finance",
+      "verificationStatus": "unverified",
+      "titleKo": "WEBTOON Entertainment, 3분기 실적 전망치 상회, 예상치를 웃도는 매출 가이던스 제시 - Yahoo Finance",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
       "id": "rss-eb077abe2df48b6e",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
@@ -87,16 +87,30 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-247d7bda56ed8785",
+      "id": "rss-6c6694f82640c010",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
       "category": "기타 업계 뉴스",
-      "title": "Webtoon Entertainment Q3 2026 Earnings Call Transcript - Benzinga",
-      "publishedAt": "2026-11-09",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNTGhPZm9raU5KUWJQSXN0Uk13azRsNkphRUplamxmWjlsVzJOUGhrMXU2V1FZZDFYd1c1TUFNX3VZVDFvbXBYYjUxUHJXYjNjc3Y2bWtpUGV5NG8xanlmZ2k3NlBuQ1ZuOUZtdy1WTzMxdFNJQWtFZ3RycTFab2twMGRSa2kycHN0cFRDVGhOMTdWbHROMm84WklZaFpGWW9l?oc=5",
-      "source": "Benzinga",
+      "title": "Webtoon Entertainment Reports Q3 2026 Revenue of $362.8 Million, - GuruFocus",
+      "publishedAt": "2026-11-10",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOUThRS2ZQVW1xZzY4T19hQVVTcElNT0Z2WFNkbER4TjlLdFRKNnBRS0Y1cDczRkRVNHdNTHdmUnZndElEb0FzV1QybTBZcTItOVZsOTRWd25RN21Jc1Z5TnVfSG1HcE5SYkFpM21EbloySXpYSjVzcHNxZ1hvbV81TjQ4a3RXQTdMMUs2UmpRbFR4U1VoSmNJWFd4VkV4MjJTUWdzQndPTnRSS0h1XzNXVmlzb2RxdlJZTVU4eDA0LUdSbHRLWnd1eE1FMHJSM204bG5vLUN3RkVHMENoaHAxN0xR?oc=5",
+      "source": "GuruFocus",
       "verificationStatus": "unverified",
-      "titleKo": "웹툰 엔터테인먼트 2026년 3분기 수입 통화 녹취록 - 벤징가",
+      "titleKo": "Webtoon Entertainment, 2026년 3분기 매출 3억 6,280만 달러 기록 - GuruFocus",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-65c85fd65cb115dc",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "WEBTOON Entertainment (WBTN) Reports Q3 2026 Revenue in Line wit - GuruFocus",
+      "publishedAt": "2026-11-10",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQQTRxc0xjRHdKRmtYdTB6M0ZuS1Zza2N5d25uUnNtTm1BZnJ6RGtDTzFKY3BTNEpXNXhtSndIM2dlRzFLWDA4OG9aSThqc1A0MFUzVDlkZEsyaktYSTZreXJwT2pSRy1qaHNrTGt3bXdIb3RLXzlvYjRwWjY2bnlNVXJPUzhpbEh0NDF1emVjVTdIRzQ2cG5nN1NjYnRpZ2JHUURCTEdHc01CQkpDdk5QOVBWVTkxY1l0cEQ5cHBUTF9yeWdpM1lNWmVhaWtoZFdzTTZFeUt1NENaNU5vTjYteDM1X21vajEy?oc=5",
+      "source": "GuruFocus",
+      "verificationStatus": "unverified",
+      "titleKo": "WEBTOON Entertainment(WBTN), 2026년 3분기 매출액 예상치 부합 - GuruFocus",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
@@ -115,44 +129,16 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-f53251363ea01a6b",
+      "id": "rss-247d7bda56ed8785",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
       "category": "기타 업계 뉴스",
-      "title": "Compared to Estimates, Webtoon (WBTN) Q3 Earnings: A Look at Key Metrics - Yahoo Finance",
+      "title": "Webtoon Entertainment Q3 2026 Earnings Call Transcript - Benzinga",
       "publishedAt": "2026-11-09",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNYUNBV3J4Q3BLWkVvMFdLRG43bWduTnFqSC1fckpzazFnS2I2UGJCekVaaWllUDdUOGRPejFoNzh0NThRMVQwVlVxZVF1c2sxSGRiNHdKVWRKeWp0ZzE3WFhneUNFcXU0RWNRWXN1WWdSMGpPT09iaWRrRUdJUVpqbjFHN1ItZENhMXZVZ1JTWkg3ZzhRcEJqUVZiZkRraWZO?oc=5",
-      "source": "Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNTGhPZm9raU5KUWJQSXN0Uk13azRsNkphRUplamxmWjlsVzJOUGhrMXU2V1FZZDFYd1c1TUFNX3VZVDFvbXBYYjUxUHJXYjNjc3Y2bWtpUGV5NG8xanlmZ2k3NlBuQ1ZuOUZtdy1WTzMxdFNJQWtFZ3RycTFab2twMGRSa2kycHN0cFRDVGhOMTdWbHROMm84WklZaFpGWW9l?oc=5",
+      "source": "Benzinga",
       "verificationStatus": "unverified",
-      "titleKo": "예상치와 비교한 웹툰 (WBTN) 3분기 실적: 주요 지표 살펴보기 - 야후 파이낸스",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-f6d329ced2654a4c",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "Webtoon: Q3 Earnings Snapshot - Yahoo Finance",
-      "publishedAt": "2026-11-09",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNaXVBcGdKSlZLNE5JenVPa0Ztei11U1FDZF9UeklVT1RKLTBiNVlnQncxOVZqSVpJWll2TVNlempBQlBOeTRFYllwR1VlZXpSMEstX3dyY2d5VmF3LWVZRmZlRERrQ2VtaDlrUlVLd1hvV2RBY1ZJb1h0R3RjMmhkUFRFS2ZGZWdMS01ESC04TXI1WkxRQmtDNA?oc=5",
-      "source": "Yahoo Finance",
-      "verificationStatus": "unverified",
-      "titleKo": "웹툰: 3분기 실적 스냅샷 - 야후 파이낸스",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-f6448afe975dce4b",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "WEBTOON Entertainment Inc. (WBTN) Q3 FY2026 earnings call transcript - Yahoo Finance",
-      "publishedAt": "2026-11-09",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdm5VSEYtSW11YkRHWDlDOUpuaTJCNlRTN25hM0RqX2FSUTYwMGxUN2RiSFZ6T1dOUVl6aGQ0SEVJY3k3SDNIWTY1SmE3UDZtNTZxZzFNbFRxVXhSUmthUS1JM2VuUFp4QXdKOXRPWWdtclVVUTZKM0Nzd245MXExcW1hWXBkTkpiUlBuRw?oc=5",
-      "source": "Yahoo Finance",
-      "verificationStatus": "unverified",
-      "titleKo": "WEBTOON Entertainment Inc.(WBTN) 2026 회계연도 3분기 실적 콘퍼런스 콜 내용 - Yahoo Finance",
+      "titleKo": "웹툰 엔터테인먼트 2026년 3분기 수입 통화 녹취록 - 벤징가",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
@@ -167,6 +153,20 @@
       "source": "TradingView",
       "verificationStatus": "unverified",
       "titleKo": "Webtoon Entertainment Inc.가 9월 30일로 마감된 분기 실적을 발표했습니다 - 실적 요약 - TradingView",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-f6448afe975dce4b",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "WEBTOON Entertainment Inc. (WBTN) Q3 FY2026 earnings call transcript - Yahoo Finance",
+      "publishedAt": "2026-11-09",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNdm5VSEYtSW11YkRHWDlDOUpuaTJCNlRTN25hM0RqX2FSUTYwMGxUN2RiSFZ6T1dOUVl6aGQ0SEVJY3k3SDNIWTY1SmE3UDZtNTZxZzFNbFRxVXhSUmthUS1JM2VuUFp4QXdKOXRPWWdtclVVUTZKM0Nzd245MXExcW1hWXBkTkpiUlBuRw?oc=5",
+      "source": "Yahoo Finance",
+      "verificationStatus": "unverified",
+      "titleKo": "WEBTOON Entertainment Inc.(WBTN) 2026 회계연도 3분기 실적 콘퍼런스 콜 내용 - Yahoo Finance",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
