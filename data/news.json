@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T01:29:49.633461+00:00",
+  "updatedAt": "2026-11-22T01:27:12.224135+00:00",
   "source": "Google News RSS metadata (unverified); headline machine translation (unofficial)",
   "articles": [
     {
@@ -115,20 +115,6 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-a72ff194116c6688",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "With Disney+ and Hulu’s Korean Romantic Epic ‘The Remarried Empress,’ Webtoon Entertainment Enters a New Phase in Hollywood - IMDb",
-      "publishedAt": "2026-11-14",
-      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9mRzdPSFc1SEFhNDZ2c2dMUU1JVHJ1MEhfa1Q2bGlHTDc1dWJ4Zm1DV0ZDS2YzMHRvRTN5S1ZOUEllVEEyUkdKR2x3NUVSQQ?oc=5",
-      "source": "IMDb",
-      "verificationStatus": "unverified",
-      "titleKo": "디즈니 + 와 훌루의 한국 로맨틱 서사시 ‘재혼한 황후’ 를 통해 웹툰 엔터테인먼트가 할리우드에서 새로운 국면을 맞이하다 - IMDb",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
       "id": "rss-37bbfe56519a1772",
       "competitor": "webtoon",
       "type": "콘텐츠·IP",
@@ -185,16 +171,16 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-eb077abe2df48b6e",
+      "id": "rss-fd04ee9bf49d95be",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
       "category": "기타 업계 뉴스",
-      "title": "WEBTOON: 3 Key Takeaways for Long-Term Investors - Yahoo Finance",
-      "publishedAt": "2026-11-10",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOaUxvV0diMDVwdEFhY1BKWHRsellWSmVMZ0NKQ1lBZWs4WWhhdFgxYjlvU2VGck84QlhNekpwaGJBb1ZJelZENm1IajdhNlN2Z2lOd0J3ZWtIb09yTEk1eWtYNWRZUU5sOGhQQWRLTXZ0dm5NUTNzemJZZGRUM2dQV3dkLXBTV01RS3ByNkRwZGF6YmxtMERPQQ?oc=5",
+      "title": "Webtoon Entertainment (WBTN) Q3 Earnings Match Estimates - Yahoo Finance",
+      "publishedAt": "2026-11-09",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQTkxHRXRSeXNuRUp3RXRCaGlFX0VwQmJJRDBsdlB5aFZMbU1ET2d5ZC1kamRpTkZtUnIyWi1SblE5M2VCVWpkclhiQzhnM2w2c3BDbXNPalhobURza3JzcWN2ZHhWWGRpb0Y4MmNiNlB4R0tqamVfTFZnbHd2WWVlUGRKcFhmU09LUnlYWUFCTUhENnpQZzFELXNXY3J6TGZmU0ZYUEhB?oc=5",
       "source": "Yahoo Finance",
       "verificationStatus": "unverified",
-      "titleKo": "웹툰: 장기 투자자를 위한 3가지 핵심 사항 - Yahoo Finance",
+      "titleKo": "웹툰 엔터테인먼트(WBTN) 3분기 실적, 예상치와 일치 - 야후 파이낸스",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
@@ -279,6 +265,20 @@
       "source": "AnimeMojo.com",
       "verificationStatus": "unverified",
       "titleKo": "Tapas 서비스 종료로 인해 'The Beginning After The End' 만화 연재 중단 - AnimeMojo.com",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-8a3471258b02c4b0",
+      "competitor": "webtoon",
+      "type": "콘텐츠·IP",
+      "category": "콘텐츠·IP",
+      "title": "The DUNGEON CRAWLER CARL WEBTOON series is getting a physical release from Vault Comics - Comics Beat",
+      "publishedAt": "2026-10-23",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQenBzbUVyblBQRjhJaGEwRG4zV1BqZnpiN1NPNlF3cXFjX3BwcnpIazRYUE5Iam1WYTQtZ0JrdXJjSFdTX3U1dVBUdlR3YVZhWENraFdnY09FWWEtVDNFaElRRVJDTFdyQnJsVWRQOG1GLTZYOUJPZlFuX3RFN0ZXUWJ0cE9FZ05NcHhDTEY2bldmM2JaLUJZUEhoNUktYmQzaFFOTnRFWS1DYmpzS3F6enRTdkVzZw?oc=5",
+      "source": "Comics Beat",
+      "verificationStatus": "unverified",
+      "titleKo": "던전 크롤러 칼 웹툰 시리즈, Vault Comics에서 실물 출간 예정 - Comics Beat",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     }
