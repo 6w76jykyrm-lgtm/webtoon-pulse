@@ -1,7 +1,21 @@
 {
-  "updatedAt": "2026-11-24T01:31:00.042339+00:00",
+  "updatedAt": "2026-11-25T01:36:59.592629+00:00",
   "source": "Google News RSS metadata (unverified); headline machine translation (unofficial)",
   "articles": [
+    {
+      "id": "rss-a7593b355b74aa39",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "'The Remarried Empress' shows IP synergy as Disney+ hit lifts webtoon views - The Korea Times",
+      "publishedAt": "2026-11-22",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYjMxTFRkQXRhT1dHRmltdGhGMkVlV3YtUHNaTDJ5VlphX1dlaFpEdF8wZm9rcG5KSUdvaWVGT0ZPcWpzaWt3QWFwQVBFR3FlZzE1NVhlVmpDTXFiUEI3WjVSNjExYS1IS3ZiMVdJQUtqYk9PRk1JendkdnZ1a214RjBfcWpzU2Q3RlV1RmNCZF8teC1nVTN3dDlESzBvQXNJMThGMk91QVNhQ0pNck5fUDQ3eE85RWVjLTFYa3lHdTR3QURSSU1UVXNiM0tPbjM0b2ROYVBpSjDSAdgBQVVfeXFMT2IzMUxUZEF0YU9XR0ZpbXRoRjJFZVd2LVBzWkwyeVZaYV9XZWhaRHRfMGZva3BuSklHb2llRk9GT3Fqc2lrd0FhcEFQRUdxZWcxNTVYZVZqQ01xYlBCN1o1UjYxMWEtSEt2YjFXSUFLamJPT0ZNSXp3ZHZ2dWtteEYwX3Fqc1NkN0ZVdUZjQmRfLXgtZ1Uzd3Q5REswb0FzSTE4RjJPdUFTYUNKTXJOX1A0N3hPOUVlYy0xWGt5R3U0d0FEUklNVFVzYjNLT24zNG9kTmFQaUow?oc=5",
+      "source": "The Korea Times",
+      "verificationStatus": "unverified",
+      "titleKo": "'재혼 황후'가 보여주는 IP 시너지 효과, 디즈니+ 히트작으로 웹툰 조회수 급증 - 코리아타임스",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
     {
       "id": "rss-8125682bdc164337",
       "competitor": "webtoon",
@@ -27,6 +41,34 @@
       "source": "Comics Beat",
       "verificationStatus": "unverified",
       "titleKo": "마블과 웹툰, 새로운 디지털 만화 구독 앱 출시로 마블 언리미티드 대체 - Comics Beat",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-82648b503bc90ac1",
+      "competitor": "manta",
+      "type": "콘텐츠·IP",
+      "category": "콘텐츠·IP",
+      "title": "Manta opens Creator’s Alley for independent comics and novel creators - Animation Xpress",
+      "publishedAt": "2026-11-17",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTWNKQmxuNTRINnVOTmRYLUdOT2kwNU5LZ2N3emVoaXE3U1NGZm1OZVhsT1JmOGkzMjNEeUh0NWFjVThHT1VjZmRhLWJmT1NXNUtldEdRTnVReFUzZDZ5a0JuMS1WX3NEUFB2el9ISWRIMG85SkkycGtINjZUSHFsOFlZZzBmZmZxSnBKWGxWR3JOMklVRmhNdlMzeE9KY1RxSTBSWXk4REdaLXlTTzYtRVpfc9IBuwFBVV95cUxPX2lwVjNoQ1pOeWVpRGxvT2JNMnYtdldpSngzLVFJdThCMzZZb3RhaHc4MXhFTjFwcmFzbGp4NFE5WHRxYUdTN0xNbFEzWmNxLUUxWVJoMXE3TGlGcHRMWFhKeEgxRk1TM1oyMzgtOGlZRkllOEVTbW9uTmVqWjV5SVVKaU1STnFSUEFrZjc0eHJVRUJoQUJDOVVIMVVqdTloUW1IR2FlNUlDOGVjM2dnMEhFcE16aXNrNktN?oc=5",
+      "source": "Animation Xpress",
+      "verificationStatus": "unverified",
+      "titleKo": "Manta, 독립 만화 및 소설 창작자를 위한 Creator’s Alley 개설 - Animation Xpress",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-1e677da1ffc15f19",
+      "competitor": "manta",
+      "type": "비즈니스·전략",
+      "category": "비즈니스·전략",
+      "title": "Ridi launches free Manta space for independent creators, plans monetization - Chosunbiz",
+      "publishedAt": "2026-11-17",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5pV2NlNHMwVGVaclk2QWR3Um5aeUF0c2cwRXZDcHR2TnpaamVDWGlJSW12cGUydjV6Qkg4LUNTVnJQS0hXejFBV2pEWl9mOUFMZXYzS3BZc3ZsUTNwbjBuUE5OT1NuS0dYLUpYbHd5eWlLbTE1ZXdFb0F30gGOAUFVX3lxTE13b1haR3NxNjlsYUdub0VuejhGbERHU2tkS2ZWTjN1RVFwS0RGZWVTbXZ3a0FleExpMzJ2RFZzS2c2VnVwOE9QQnBrVjZrS2dUWERfQ3E1VERCMUtndl9fRlZ2WUkxTXdvLXlKUW9GQTJjYnJsM19PV0U4RlJ6anZrQTJOWGJFOE5KZVNMZmc?oc=5",
+      "source": "Chosunbiz",
+      "verificationStatus": "unverified",
+      "titleKo": "Ridi, 독립 크리에이터를 위한 무료 Manta 공간 론칭, 수익화 계획 - 조선비즈",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
@@ -59,18 +101,32 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-37bbfe56519a1772",
+      "id": "rss-b05d77c7c2d5dca1",
       "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "Webtoon (WBTN) Reliance on International Sales: What Investors Need to Know - Yahoo Finance",
+      "publishedAt": "2026-11-16",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSkRNU1A1WV95ckNxOV9kY1djNjNzRjJvamdrWTdRQWk4WGRzaXdWNVl2Qk1HOU8xblVBbE9DWGU1ZDlPQkhMdTJRMDZOQW5mZ0lYUmEwZ2VaMHNXWGpVUmFBNmtRSmN5dHJKZWZXYi1SZ1RaV2F6RnRRVjdWVEItMzJvYjhON1NjS1piMko1Y2hqZXFFUzZSRUg1TTNpYjZVaExvblpUNUg4QQ?oc=5",
+      "source": "Yahoo Finance",
+      "verificationStatus": "unverified",
+      "titleKo": "웹툰(WBTN)의 해외 매출 의존도: 투자자가 알아야 할 사항 - Yahoo Finance",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-41f8424c958e809c",
+      "competitor": "manta",
       "type": "콘텐츠·IP",
       "category": "콘텐츠·IP",
-      "title": "Japan's No9 raises fresh funds from LINE Manga operator for webtoon push - Dealroom",
-      "publishedAt": "2026-11-11",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQR1RLcE93aHdqejFPMGlaRVRsRlk5T2UzYkZ3ZjVqT2swOUpsVTdvYjRNS1d1S0hiZ2M0MkFTbWQ2UGJIOERXckxWR3ZfOEpQemNOTmlaN2tLaDJNbDFlYUZ0bmdRY1dJb1FjNnlJWUZBcmZCc3VyWUFBUGxyZ0dYb3FHRThJbDJoUmoxRG5MaXptaC1QSWFuTkpVbnlTdlBZVWQ1R3ZvcTRxdw?oc=5",
-      "source": "Dealroom",
+      "title": "Manta Opens Creator's Alley, a Self-Publishing Space for Independent Creators - StreetInsider",
+      "publishedAt": "2026-11-16",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxObWVSX0d0a2l2R2Z0dHZRN0pVMFctYVBvTHdfLUNJQm0wRzRWQmZLVXdKYUpYRFVFX1YtdzlqZjZGSFpXMGNaU2VBbWFhZHhNYnlnWUFKLWJkcHJlWGZQYjJ3anFyTC1CVzlob0NvU2MzbmFoVFJ0YkVsWDFrdzExbktkYTBoZ2FKd3pOQ2FaeWJkUTVwRnlCNEFMVVhGMF9WemlFajMzWE1xYjFoeEUyQXplOWZLcTcwTkZTYmJ1OWZqdXA1WjdfOXZjbFVNcEhPeXc?oc=5",
+      "source": "StreetInsider",
       "verificationStatus": "unverified",
-      "titleKo": "Japan's No9 raises fresh funds from LINE Manga operator for webtoon push - Dealroom",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
+      "titleKo": "Manta, 독립 크리에이터를 위한 자가 출판 공간 '크리에이터스 앨리' 개설 - StreetInsider",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
       "id": "rss-3c18b7c913d3a4de",
@@ -115,20 +171,6 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-71e411e965e4daa0",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "Webtoon: Q3 Earnings Snapshot - KVUE",
-      "publishedAt": "2026-11-09",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNTHY1OWNzRURHQWZHT1hGX3A4YnJhZnk5dUJocTJfUGI2VldvZ3pjY1otbUljd19EdHhiblNMQ2h4Vk1iX0JsOVVSdmtWMnpZWnNEWjdpWExaQy0ySHVLM1hPMGk5aWU0NWRwN3dla1poNjUzVDFWLTc2eF9MSnB1LWJNTjl4U3EtMFJiV0xickxsRUtLWjJtaFpTRFdaWlNVZDA0cFF0SjJMdzUzQU1qVWx5ejlhOWdmNlVOajJBeXRWT2du?oc=5",
-      "source": "KVUE",
-      "verificationStatus": "unverified",
-      "titleKo": "Webtoon: Q3 Earnings Snapshot - KVUE",
-      "translationStatus": "unavailable",
-      "summary": "한국어 번역을 가져오지 못했습니다. RSS 제목 기준 자동 분류이며 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
       "id": "rss-83a3321c8d1c6077",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
@@ -153,20 +195,6 @@
       "source": "Yahoo Finance",
       "verificationStatus": "unverified",
       "titleKo": "웹툰 엔터테인먼트(WBTN) 3분기 실적, 예상치와 일치 - 야후 파이낸스",
-      "translationStatus": "machine_mymemory",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-c617d7a61c05966d",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "Webtoon Entertainment Inc reports results for the quarter ended September 30 - Earnings Summary - TradingView",
-      "publishedAt": "2026-11-09",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxQd3BabTFob193d0g2UlM4ek5aTUhoeXBXUHpPanhUcnV3bmdMVGpDZXRzak5RMTVNdk9zS1d2UGxjazF4MzFrZl9GRXJOXzktZFVpdUdOcGJLMjI0MVIwOXR5MEFCbjh3SW94MFpBc2d2NDZkUjRTdjZJMUZkcnZkYU83NFJlbk90QmlqZDdoaWhYQ0UxZEF4T1l1M1NIWWVXNlV2aVZfVWM5RlVMOEwzTVlLWDBwMUQwSkUxdHBoNXBnUzBNR0ZhVGFyZGVoZlJkTGtWcWQyUXJINVlEOGlyVTdncVJnMUtaZW1UYnVwYlBGZmVhb3c?oc=5",
-      "source": "TradingView",
-      "verificationStatus": "unverified",
-      "titleKo": "Webtoon Entertainment Inc.가 9월 30일로 마감된 분기 실적을 발표했습니다 - 실적 요약 - TradingView",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
@@ -209,6 +237,20 @@
       "source": "Investing.com",
       "verificationStatus": "unverified",
       "titleKo": "웹툰 엔터테인먼트, 수익성 테스트 통과 - Investing.com",
+      "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-8a9c5ada6542a2e0",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "WEBTOON Entertainment Inc. (WBTN) Seasonal Returns Chart - Yahoo Finance - Yahoo! Finance Canada",
+      "publishedAt": "2026-10-29",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5lVS1UZUtUTEszVkRZVE9KMWJ6RUM0OURJV1VjY1F5aHh4dDRCT25PNHVWNWZlUGhpNlRHV19qYW9Mclc1NVdtT2NlTk9NekZlcWJQYTIxTVp4RVZROWhZTGJB?oc=5",
+      "source": "Yahoo! Finance Canada",
+      "verificationStatus": "unverified",
+      "titleKo": "WEBTOON Entertainment Inc.(WBTN) 계절별 수익률 차트 - Yahoo Finance - Yahoo! Finance Canada",
       "translationStatus": "machine_mymemory",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     }
