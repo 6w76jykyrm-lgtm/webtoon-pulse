@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T01:36:56.946284+00:00",
+  "updatedAt": "2026-11-27T01:38:53.055033+00:00",
   "source": "Google News RSS metadata (unverified); headline machine translation (unofficial)",
   "articles": [
     {
@@ -101,44 +101,44 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-d405042e6217320b",
+      "id": "rss-b05d77c7c2d5dca1",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
       "category": "기타 업계 뉴스",
-      "title": "Webtoon Board Reaches Shareholder Deal in IPO Derivative Lawsuit - Bloomberg Law News",
+      "title": "Webtoon (WBTN) Reliance on International Sales: What Investors Need to Know - Yahoo Finance",
       "publishedAt": "2026-11-16",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPampSaEhxWVhTazg2enowSW83bXRzQm9GQWZuVFBiLUxtR3k0S1lXZEZCVk5tcXM2WUdCaThSQTg2S1Y5VFJkUnZReUhsM0dkU3RoYUhydGIyMjBoZDQ4aVRQQkRrbTA3R3VMamZ3R2F5ZWJwRF9vd2FxWnpSRExzMVRvOUktb05Zdjg1Q2RiRDVhUWYyX1lDNXdRMmRIWXFtT2d0amRqbHRnRVl4R2c?oc=5",
-      "source": "Bloomberg Law News",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOSkRNU1A1WV95ckNxOV9kY1djNjNzRjJvamdrWTdRQWk4WGRzaXdWNVl2Qk1HOU8xblVBbE9DWGU1ZDlPQkhMdTJRMDZOQW5mZ0lYUmEwZ2VaMHNXWGpVUmFBNmtRSmN5dHJKZWZXYi1SZ1RaV2F6RnRRVjdWVEItMzJvYjhON1NjS1piMko1Y2hqZXFFUzZSRUg1TTNpYjZVaExvblpUNUg4QQ?oc=5",
+      "source": "Yahoo Finance",
       "verificationStatus": "unverified",
-      "titleKo": "웹툰보드, IPO 파생소송에서 주주계약 성사 - Bloomberg Law News",
+      "titleKo": "웹툰(WBTN) 해외 판매 의존: 투자자가 알아야 할 사항 - Yahoo Finance",
       "translationStatus": "machine_google",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-902a9bf7861f354e",
+      "id": "rss-41f8424c958e809c",
       "competitor": "manta",
       "type": "콘텐츠·IP",
       "category": "콘텐츠·IP",
-      "title": "Manta Opens Creator's Alley, a Self-Publishing Space for Independent Creators [2026-11-16] - Anime News Network",
+      "title": "Manta Opens Creator's Alley, a Self-Publishing Space for Independent Creators - StreetInsider",
       "publishedAt": "2026-11-16",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPNnl4LVpXLTZsaU1fbWpVU2VOM1pKNWhWZi02S2hfdlhsRWl2Rkx5U0lDWjhQYm9yaWRYQnZIOXVLdTR5MVM1RUxhQVBHV2NpbGNPV0twRF9LZFhndGhPUjE2S0xmbXhHa3BYYkw0cWFVTXZxaUZwazJBcXQ0M3RLUkg1WTJvRWJMeUJKX1VWYkNWTU1ETDlMRmR1Njd4bk50SWtFWTdEczM2QnZiek15c2dxQnRLTVJDVnQ3X0I0V28zcHE1T0stNGNzR2tWVTlQVzF6c3ZlUQ?oc=5",
-      "source": "Anime News Network",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxObWVSX0d0a2l2R2Z0dHZRN0pVMFctYVBvTHdfLUNJQm0wRzRWQmZLVXdKYUpYRFVFX1YtdzlqZjZGSFpXMGNaU2VBbWFhZHhNYnlnWUFKLWJkcHJlWGZQYjJ3anFyTC1CVzlob0NvU2MzbmFoVFJ0YkVsWDFrdzExbktkYTBoZ2FKd3pOQ2FaeWJkUTVwRnlCNEFMVVhGMF9WemlFajMzWE1xYjFoeEUyQXplOWZLcTcwTkZTYmJ1OWZqdXA1WjdfOXZjbFVNcEhPeXc?oc=5",
+      "source": "StreetInsider",
       "verificationStatus": "unverified",
-      "titleKo": "만타, 독립 창작자들을 위한 셀프 퍼블리싱 공간 '크리에이터스 앨리' 오픈 [2026-11-16] - Anime News Network",
+      "titleKo": "Manta, 독립 창작자를 위한 자체 출판 공간인 Creator's Alley 오픈 - StreetInsider",
       "translationStatus": "machine_google",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-37bbfe56519a1772",
+      "id": "rss-a72ff194116c6688",
       "competitor": "webtoon",
-      "type": "콘텐츠·IP",
-      "category": "콘텐츠·IP",
-      "title": "Japan's No9 raises fresh funds from LINE Manga operator for webtoon push - Dealroom",
-      "publishedAt": "2026-11-11",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQR1RLcE93aHdqejFPMGlaRVRsRlk5T2UzYkZ3ZjVqT2swOUpsVTdvYjRNS1d1S0hiZ2M0MkFTbWQ2UGJIOERXckxWR3ZfOEpQemNOTmlaN2tLaDJNbDFlYUZ0bmdRY1dJb1FjNnlJWUZBcmZCc3VyWUFBUGxyZ0dYb3FHRThJbDJoUmoxRG5MaXptaC1QSWFuTkpVbnlTdlBZVWQ1R3ZvcTRxdw?oc=5",
-      "source": "Dealroom",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "With Disney+ and Hulu’s Korean Romantic Epic ‘The Remarried Empress,’ Webtoon Entertainment Enters a New Phase in Hollywood - IMDb",
+      "publishedAt": "2026-11-14",
+      "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9mRzdPSFc1SEFhNDZ2c2dMUU1JVHJ1MEhfa1Q2bGlHTDc1dWJ4Zm1DV0ZDS2YzMHRvRTN5S1ZOUEllVEEyUkdKR2x3NUVSQQ?oc=5",
+      "source": "IMDb",
       "verificationStatus": "unverified",
-      "titleKo": "일본 No9, 웹툰 추진 위해 라인망가로부터 신규 자금 조달 - 딜룸",
+      "titleKo": "디즈니+와 훌루의 한국 로맨틱 대작 '재혼황후'로 웹툰 엔터테인먼트, 할리우드에서 새로운 국면 진입 - IMDb",
       "translationStatus": "machine_google",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
@@ -171,6 +171,20 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
+      "id": "rss-55701c176a649f2e",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "WEBTOON Entertainment Beats Q3 Earnings Estimates, Issues Revenue Guidance Above Forecasts - Yahoo Finance",
+      "publishedAt": "2026-11-10",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcWgxSGFmNEJ3ZE5JR1JOVFVrTExZWFNHeF9XSFN6ZHVuYU4tc2lncFpvR29HNUM0V0lqY3pLMUFWZ0VMMHlmZTY0WE1PcXNZOERScGtscjRnX2JhOWNpYmxfSTZhWDNTbGc5ZWpodHd1bHZZRV9ScF9KLXU5Ymd3eGJZN0VXOWRLTUFpMExvdWFkN0lNemQ1NWwzQ1lXcEdKZ3d5VjQwSQ?oc=5",
+      "source": "Yahoo Finance",
+      "verificationStatus": "unverified",
+      "titleKo": "WEBTOON Entertainment, 3분기 실적 예상치 상회, 예상보다 높은 매출 가이던스 발표 - Yahoo Finance",
+      "translationStatus": "machine_google",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
       "id": "rss-83a3321c8d1c6077",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
@@ -181,20 +195,6 @@
       "source": "Yahoo Finance",
       "verificationStatus": "unverified",
       "titleKo": "웹툰 엔터테인먼트 3분기 실적발표 하이라이트 - 야후 파이낸스",
-      "translationStatus": "machine_google",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
-      "id": "rss-71e411e965e4daa0",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "Webtoon: Q3 Earnings Snapshot - KVUE",
-      "publishedAt": "2026-11-09",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNTHY1OWNzRURHQWZHT1hGX3A4YnJhZnk5dUJocTJfUGI2VldvZ3pjY1otbUljd19EdHhiblNMQ2h4Vk1iX0JsOVVSdmtWMnpZWnNEWjdpWExaQy0ySHVLM1hPMGk5aWU0NWRwN3dla1poNjUzVDFWLTc2eF9MSnB1LWJNTjl4U3EtMFJiV0xickxsRUtLWjJtaFpTRFdaWlNVZDA0cFF0SjJMdzUzQU1qVWx5ejlhOWdmNlVOajJBeXRWT2du?oc=5",
-      "source": "KVUE",
-      "verificationStatus": "unverified",
-      "titleKo": "웹툰: 3분기 실적현황 - KVUE",
       "translationStatus": "machine_google",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
@@ -227,20 +227,6 @@
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     },
     {
-      "id": "rss-21b364e8927e001d",
-      "competitor": "webtoon",
-      "type": "기타 업계 뉴스",
-      "category": "기타 업계 뉴스",
-      "title": "With Disney+ and Hulu’s Korean Romantic Epic ‘The Remarried Empress,’ Webtoon Entertainment Enters a New Phase in Hollywood - IMDb",
-      "publishedAt": "2026-11-05",
-      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE10cUlFLS1sR0s4RUhaTFlnNEEteVUyUkxveHFmZkxXTHVoRlBKQWotaTlyT01mLXB4XzN2aXQtOVpwMDV3X1ZCRXJrQVVqWm5iZEdWNC11TGlGNFdaVlhzWUNLNDVGZw?oc=5",
-      "source": "IMDb",
-      "verificationStatus": "unverified",
-      "titleKo": "디즈니+와 훌루의 한국 로맨틱 대작 '재혼황후'로 웹툰 엔터테인먼트, 할리우드에서 새로운 국면 진입 - IMDb",
-      "translationStatus": "machine_google",
-      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
-    },
-    {
       "id": "rss-40050940ecbc7f98",
       "competitor": "webtoon",
       "type": "기타 업계 뉴스",
@@ -252,6 +238,20 @@
       "verificationStatus": "unverified",
       "titleKo": "웹툰 엔터테인먼트, 수익성 테스트 통과 - Investing.com",
       "translationStatus": "machine_mymemory",
+      "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
+    },
+    {
+      "id": "rss-8a9c5ada6542a2e0",
+      "competitor": "webtoon",
+      "type": "기타 업계 뉴스",
+      "category": "기타 업계 뉴스",
+      "title": "WEBTOON Entertainment Inc. (WBTN) Seasonal Returns Chart - Yahoo Finance - Yahoo! Finance Canada",
+      "publishedAt": "2026-10-29",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5lVS1UZUtUTEszVkRZVE9KMWJ6RUM0OURJV1VjY1F5aHh4dDRCT25PNHVWNWZlUGhpNlRHV19qYW9Mclc1NVdtT2NlTk9NekZlcWJQYTIxTVp4RVZROWhZTGJB?oc=5",
+      "source": "Yahoo! Finance Canada",
+      "verificationStatus": "unverified",
+      "titleKo": "WEBTOON Entertainment Inc.(WBTN) 시즌별 수익률 차트 - Yahoo Finance - Yahoo! 캐나다 재무",
+      "translationStatus": "machine_google",
       "summary": "RSS 제목의 자동 번역입니다. 기사 본문과 관련성은 검증되지 않았습니다."
     }
   ]
